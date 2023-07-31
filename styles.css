@@ -1,0 +1,565 @@
+html {
+    font-size: 10px;
+    font-family: "Raleway", sans-serif;
+    box-sizing: border-box;
+}
+
+body,
+span,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+li,
+input,
+label,
+a {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+}
+
+a {
+    -webkit-tap-highlight-color: transparent;
+}
+
+:root {
+    /* default palette */
+    --color-01: #f6f1e9;
+    --color-02: #ffd93d;
+    --color-03: #ff8400;
+    --color-04: #4f200d;
+
+    /* fonts */
+    --font-header: 1.4rem;
+}
+
+body {
+    background-color: var(--color-0);
+}
+
+/* body-containter-outer start @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ */
+.body-container-outer {
+    width: 100%;
+    /* max-width: 150rem; */
+    height: 200rem;
+    margin: 0 auto;
+    /* padding: 7rem 0; */
+    box-sizing: border-box;
+}
+/* body-containter-outer end   @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ */
+
+/* head-outer start            @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ */
+.head-outer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 7rem;
+    padding: 0 2rem;
+    background-color: var(--color-03);
+    box-shadow: 0.5rem 0.5rem 1rem -0.8rem var(--color-04);
+    transition: height 0.3s ease-in-out;
+    z-index: 5;
+}
+
+header {
+    max-width: 150rem;
+    margin: 0 auto;
+    /* background-color:#4f200d; */
+    width: 100%;
+    height: 100%;
+}
+
+header ul {
+    display: grid;
+    grid-template-columns: 0.5fr 0.5fr 0.5fr 1fr 0.5fr;
+    height: 100%;
+    align-content: center;
+    justify-items: center;
+}
+
+header li {
+    border-radius: 5rem;
+    background-color: var(--color-03);
+    box-shadow: 0.5rem 0.5rem 1rem -0.8rem var(--color-04),
+        -0.5rem -0.5rem 1rem -0.8rem var(--color-02);
+    /* background-color: red; */
+}
+
+header .li-me {
+    box-shadow: inset 0.5rem 0.5rem 1rem -0.8rem var(--color-04),
+        inset -0.5rem -0.5rem 1rem -0.8rem var(--color-02);
+    position: relative;
+}
+
+header a {
+    font-size: var(--font-header);
+    text-transform: uppercase;
+    color: var(--color-04);
+    font-weight: 500;
+    letter-spacing: 0.1rem;
+    padding: 1.25rem 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.head-li.li-style-pressed {
+    box-shadow: inset 0.5rem 0.5rem 1rem -0.8rem var(--color-04),
+        inset -0.5rem -0.5rem 1rem -0.8rem var(--color-02);
+}
+
+header a svg {
+    width: 1.6rem;
+    height: 1.6rem;
+    margin-right: 1rem;
+    border-radius: 1rem;
+    fill: var(--color-04);
+}
+
+header li:nth-child(3) {
+    stroke: var(--color-04);
+}
+
+header ul li:nth-child(5) {
+    stroke: var(--color-04);
+}
+
+.sandwich-menu {
+    display: none;
+}
+
+.header-span {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.header-span svg {
+    position: absolute;
+    top: 50%;
+    width: 10rem;
+    left: 90%;
+    transform: translate(-90%, -50%) rotate(90deg);
+    fill: var(--color-01);
+}
+
+/* head-outer end              @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ */
+
+/* body-outer start            @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ */
+
+.body-outer {
+    width: 100%;
+    height: 500rem;
+    /* box-sizing: border-box; */
+    /* background-color: red; */
+    /* position: relative; */
+}
+
+/* TODO: */
+
+.home-section-one{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    background-color: #ffd93d;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column; 
+    /* sjustify-content: center; */
+    align-items: center;
+}
+
+.home-section-one img {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(/IMG/PNG/orange.jpg);
+    background-repeat: no-repeat;
+    background-size: 170%;
+    background-position: center 30%;
+    filter:  brightness(100%) hue-rotate(-20deg);
+    z-index: 1;
+}
+
+.home-section-one .text{
+    position: absolute;
+    right: 5%;
+    top: 0;
+    width: 100%;
+    height: 75vh;
+    z-index: 2;
+    padding: 0 2rem;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    max-width: 800px;
+}
+
+.home-section-one h1{
+    font-size: 5rem;
+    color: var(--color-04);
+    z-index: 2;
+    padding: 0 2rem;
+    text-transform: uppercase;
+    font-weight: 400;
+    letter-spacing: .1rem;
+}
+
+.home-section-one p{
+    z-index: 2;
+    font-size: 2.5rem;
+    color: var(--color-04);
+    margin-top: 1rem;
+}
+
+.home-section-one a{
+    text-decoration: none;
+    font-size: 2rem;
+    text-transform: uppercase;
+    margin-top: 2rem;
+    padding: 1rem 4rem;
+    border: 1px solid var(--color-02);
+    border-radius: 5rem;
+    background-color: var(--color-03);
+    box-shadow: 0.5rem 0.5rem 1rem -0.8rem var(--color-04),
+    -0.5rem -0.5rem 1rem -0.8rem var(--color-02);
+}
+
+.home-section-one a:active{
+    box-shadow: inset 0.5rem 0.5rem 1rem -0.8rem var(--color-04),
+    inset -0.5rem -0.5rem 1rem -0.8rem var(--color-02);
+    color: var(--color-02)
+}
+
+
+/* body-outer end              @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
+
+/* footer-outer start          @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
+
+/* footer-outer end            @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
+
+/* RANDOM EXPERIMENTATION START @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
+
+/* RANDOM EXPERIMENTATION END @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
+
+/* MEDIAS START      @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
+
+@media screen and (min-width: 2200px){
+    .home-section-one .text{
+        right: 5%;
+    }
+}
+
+@media screen and (max-width: 2000px){
+    .home-section-one img {      
+        background-position: center 30%;
+    }
+}
+
+@media screen and (max-width: 1650px){
+    .home-section-one .text{
+        right: 50%;
+        transform: translateX(50%);
+        /* max-width: 75rem; */
+    }
+
+    .home-section-one img{
+        background-size: 200%;
+        background-position: center 100%;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .head-outer {
+        top: initial;
+        bottom: 0;
+    }
+
+    header ul {
+        grid-template-columns: 1fr 0.5fr 0.5fr 0.5fr 0.5fr;
+    }
+
+    /* moving all the buttons to the right */
+
+    header ul > :nth-child(1) {
+        /* home */
+        order: 2;
+    }
+
+    header ul > :nth-child(2) {
+        /* work */
+        order: 3;
+    }
+
+    header ul > :nth-child(3) {
+        /* about */
+        order: 4;
+    }
+
+    header ul > :nth-child(4) {
+        /* logo */
+        order: 1;
+    }
+
+    header ul > :nth-child(5) {
+        /* login */
+        order: 5;
+    }
+
+    .header-span svg {
+        top: 50%;
+        width: 10rem;
+        left: 10%;
+        transform: translate(-10%, -50%) rotate(90deg);
+    }
+
+    header a {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 0.8rem 3rem;
+    }
+
+    .header-outer li {
+        /* display: none; */
+        padding-top: 0.3rem;
+        font-size: 0.8rem;
+        transition: all 1s ease-in-out;
+    }
+    header .sandwich-menu {
+        visibility: initial;
+    }
+
+    header ul li > * {
+        transition: transform 0.5s ease-in-out;
+    }
+
+    header a svg {
+        margin-right: 0;
+        width: 2rem;
+        height: 2rem;
+    }
+
+    /* body */
+
+    .home-section-one .text{
+        /* right: 0; */
+    }
+}
+
+@media screen and (max-width: 850px){
+    .home-section-one img {
+        background-size: 300%;
+        background-position: 50% 0%;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    /* creating a 3 columns grid in order to have only a logo, empty space, sandwich menu */
+    header ul {
+        grid-template-columns: 2fr 2fr 9rem;
+    }
+
+    header li {
+        visibility: hidden;
+    }
+
+    header ul > :nth-child(1) {
+        visibility: hidden;
+        order: 2;
+    }
+
+    header ul > :nth-child(2) {
+        display: none;
+        /* order: 1; */
+    }
+
+    header ul > :nth-child(3) {
+        display: none;
+    }
+
+    header ul > :nth-child(4) {
+        display: block;
+        order: 1;
+    }
+
+    header ul > :nth-child(5) {
+        display: none;
+    }
+
+    .sandwich-menu {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        order: 3;
+        height: 100%;
+        width: 100%;
+        cursor: pointer;
+    }
+
+    .sandwich-menu:active {
+        box-shadow: inset 0.5rem 0.5rem 1rem -0.8rem var(--color-04),
+            inset -0.5rem -0.5rem 1rem -0.8rem var(--color-02);
+    }
+
+    .head-outer.sandwiched .sandwich-menu:active {
+        box-shadow: inset 0.5rem 0.5rem 1rem -0.8rem var(--color-04),
+            inset -0.5rem -0.5rem 1rem -0.8rem var(--color-02);
+    }
+
+    .sandwich-menu div {
+        height: 0.4rem;
+        width: 2rem;
+        background-color: var(--color-04);
+        margin: 0.3rem 0;
+        border-radius: 1rem;
+    }
+
+    /* road to sandwich menu */
+
+    .head-outer.sandwiched {
+        height: 100%;
+        max-height: 100vh;
+    }
+
+    .head-outer.sandwiched ul {
+        display: grid;
+        grid-template-rows: 3fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        max-height: 100vh;
+    }
+
+    .head-outer.sandwiched ul li:nth-child(1) {
+        visibility: visible;
+        order: 2;
+    }
+
+    .head-outer.sandwiched ul li:nth-child(2) {
+        order: 3;
+        visibility: visible;
+    }
+
+    .head-outer.sandwiched ul li:nth-child(3) {
+        order: 4;
+        visibility: visible;
+    }
+
+    .head-outer.sandwiched ul li:nth-child(5) {
+        order: 5;
+        visibility: visible;
+    }
+
+    .head-outer.sandwiched ul .sandwich-menu {
+        order: 6;
+        width: min-content;
+        width: 8rem;
+        height: 6rem;
+        max-height: 8rem;
+        position: relative;
+        box-shadow: 0.5rem 0.5rem 1rem -0.8rem var(--color-04),
+            -0.5rem -0.5rem 1rem -0.8rem var(--color-02);
+        margin-top: 0.8rem;
+        /* margin-bottom: 1rem; */
+    }
+
+    .head-outer.sandwiched ul li:nth-child(6) div {
+        width: 3rem;
+        height: 0.6rem;
+    }
+
+    .head-outer.sandwiched ul li:nth-child(6) div:nth-child(3) {
+        display: none;
+    }
+
+    .head-outer.sandwiched ul li:nth-child(6) div:nth-child(1) {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) rotate(45deg);
+    }
+
+    .head-outer.sandwiched ul li:nth-child(6) div:nth-child(2) {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) rotate(135deg);
+    }
+
+    .head-outer.sandwiched .header-span svg {
+        left: 50%;
+        transform: translate(-50%, -50%) rotate(90deg);
+    }
+
+    .head-outer.sandwiched li {
+        box-shadow: none;
+        display: block;
+        position: relative;
+    }
+
+    .head-outer.sandwiched li:not(:last-child) {
+        margin-right: 0.4rem;
+        padding-right: 0.4rem;
+    }
+
+    .head-outer.sandwiched .li-me::before {
+        position: absolute;
+        content: "";
+        bottom: 0;
+        left: 1rem;
+        right: 1rem;
+        height: 0.2rem;
+        background-color: var(--color-04);
+    }
+
+    .head-outer.sandwiched li:not(:last-child):hover::after {
+        position: absolute;
+        content: "";
+        bottom: 0;
+        left: 1rem;
+        right: 1rem;
+        height: 0.2rem;
+        background-color: var(--color-04);
+        transition: all 0.2s ease;
+        z-index: 1;
+    }
+
+    .head-outer.sandwiched a {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .head-outer.sandwiched a p {
+        font-size: 3rem;
+    }
+
+    .head-outer.sandwiched a svg {
+        padding-right: 1rem;
+        width: 4rem;
+        height: 4rem;
+    }
+
+    /* BODY STYLES START @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ */
+
+
+
+    /* BODY STYLES END @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ */
+}
+
+/* MEDIAS END        @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
