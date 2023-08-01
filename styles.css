@@ -94,15 +94,16 @@ a {
 .background {
     width: 100%;
     height: 100%;
-    background-position: center top;
+    background-position: left top;
     background-image: linear-gradient(
             to right,
-            rgba(255, 255, 255, 0) 5%,
-            rgba(238, 236, 218, 0.8) 10%,
-            rgba(238, 236, 218, 0.8) 90%,
-            rgba(255, 255, 255, 0) 100%
+            rgba(255, 255, 255, .4) 0%,
+            rgba(238, 236, 218, .95) 10%,
+            rgba(238, 236, 218, .95) 90%,
+            rgba(255, 255, 255, .4) 100%
         ),
         url(/IMG/PNG/forest-tile.png);
+    filter: hue-rotate(-40deg);
     /* background-image: url(/IMG/PNG/forest-tile.png); */
 }
 
