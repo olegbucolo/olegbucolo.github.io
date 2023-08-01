@@ -106,6 +106,8 @@ a {
     /* background-image: url(/IMG/PNG/forest-tile.png); */
 }
 
+
+
 @media screen and (max-width: 600px) {
     .head-outer {
         background-size: cover;
@@ -114,7 +116,7 @@ a {
 
 @media screen and (max-width: 1000px) {
     .head-outer header {
-        grid-template-columns: 1fr 5fr 1fr;
+        grid-template-columns: 80px 5fr 80px;
     }
 
     .head-outer a:not(.nav-link-logo):not(.nav-link-sandwich) {
@@ -133,33 +135,35 @@ a {
     .head-outer.pressed a.nav-link-home, .head-outer.pressed a.nav-link-work, .head-outer.pressed a.nav-link-about, .head-outer.pressed a.nav-link-login{
         display: initial;
         font-size: 2.5rem;
-        padding: .5rem 2rem;
+        padding: .5rem 0;
     }
 
     .head-outer.pressed .nav-link-home{
-        grid-column: 2;
+        
+        grid-column: span 3;
         grid-row: 3;
     }
 
     .head-outer.pressed .nav-link-work{
-        grid-column: 2;
+        grid-column: span 3;
         grid-row: 4;
     }
 
     .head-outer.pressed .nav-link-about{
-        grid-column: 2;
+        grid-column: span 3;
         grid-row: 5;
     }
 
     .head-outer.pressed .nav-link-logo{
-        grid-column: 2;
+        grid-column: span 3;
         grid-row: 2;
         width: 10rem;
         height: 10rem;
+        
     }
 
     .head-outer.pressed .nav-link-login{
-        grid-column: 2;
+        grid-column: span 3;
         grid-row: 6;
     }
 
@@ -203,3 +207,4 @@ a {
 
 
 }
+
