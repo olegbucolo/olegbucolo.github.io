@@ -179,7 +179,7 @@ a {
 
 @media screen and (max-width: 1000px) {
     .head-outer header {
-        grid-template-columns: 5rem 5fr 5rem;
+        grid-template-columns: 6rem 5fr 6rem;
     }
 
     .head-outer a:not(.nav-link-logo):not(.nav-link-sandwich) {
@@ -193,7 +193,7 @@ a {
     }
 
     .head-outer.pressed header {
-        grid-template-rows: 5rem 10rem 5rem 5rem 5rem 5rem;
+        grid-template-rows: 6rem 10rem 6rem 6rem 6rem 6rem;
     }
 
     /* Animation for fading in */
