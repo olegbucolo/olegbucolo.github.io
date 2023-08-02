@@ -50,7 +50,7 @@ a {
 
 /* TODO: THEMES */
 
-.background.dark-theme {
+.body-outer-01.dark-theme {
     filter: hue-rotate(25deg) invert();
 }
 
@@ -60,7 +60,7 @@ a {
 
 .body-container {
     width: 100%;
-    height: 500rem;
+    height: 1000rem;
     background-color: var(--color-01);
 }
 
@@ -70,7 +70,7 @@ a {
     right: 0;
     padding: 0 1rem;
     height: 6rem;
-    background-image: url(/IMG/PNG/oleg_bucolo_impressionist_navigation_bar_for_website_676609c6-e24c-4e11-a0a0-74efa6c165e2.png);
+    background-image: url(/IMG/PNG/optimized/nav-01.jpg);
     background-position: center bottom;
     background-repeat: no-repeat;
     background-size: 140%;
@@ -142,7 +142,7 @@ a {
     background-position: center center;
     background-size: 150%;
     background-repeat: no-repeat;
-    background-image: url(/IMG/PNG/oleg_logo-removebg.png);
+    background-image: url(/IMG/PNG/optimized/oleg_logo-removebg.png);
     transition: all 0.2s ease-in-out;
 }
 
@@ -157,28 +157,48 @@ a {
     height: 100%;
 }
 
-.background {
+.body-outer-01 {
     width: 100%;
     height: 100%;
-    background-position: 57% top;
+    background-position: center top;
+    background-size: cover ;
+    /* background-size: 100%; */
+    background-repeat: no-repeat;
     background-image: linear-gradient(
             to right,
-            rgba(255, 255, 255, 0.4) 0%,
-            rgba(238, 236, 218, 0.95) 10%,
-            rgba(238, 236, 218, 0.95) 90%,
-            rgba(255, 255, 255, 0.4) 100%
+            rgba(255, 255, 255, 0) 0%,
+            rgba(238, 236, 218, .8) 8%,
+            rgba(238, 236, 218, .8) 92%,
+            rgba(255, 255, 255, 0) 100%
         ),
-        url(/IMG/PNG/forest-tile.png);
-    filter: hue-rotate(25deg);
+        url(/IMG/PNG/optimized/b-background-01.jpg);
+    
+}
+
+.body-01-01{
+    width: 100%;
+    max-width: 150rem;
+    height: 100rem;
+    margin: 0 auto;
 }
 
 /* TODO: */
 
-*::-webkit-scrollbar {
+/* *::-webkit-scrollbar {
     display: none;
-}
+} */
 
 @media screen and (max-width: 600px) {
+
+}
+
+@media screen and (max-width: 624px){
+    .body-outer-01 {
+        background-size: contain ;
+
+        
+    }
+
     .head-outer {
         background-size: cover;
     }
@@ -271,7 +291,7 @@ a {
     .head-outer .nav-link-sandwich span {
         font-weight: 400;
         width: 3rem;
-        height: .3rem;
+        height: .2rem;
         background-color: var(--color-04);
         margin: .3rem auto;
         border-radius: 5rem;
@@ -281,7 +301,7 @@ a {
     /* sandwich menu animation using spans */
 
     .head-outer.pressed .nav-link-sandwich span:nth-child(1) {
-        transform: translateY(.9rem) rotate(45deg);
+        transform: translateY(.8rem) rotate(45deg);
     }
 
     .head-outer.pressed .nav-link-sandwich span:nth-child(2) {
@@ -289,6 +309,6 @@ a {
     }
 
     .head-outer.pressed .nav-link-sandwich span:nth-child(3) {
-        transform: translateY(-.9rem) rotate(-45deg);
+        transform: translateY(-.8rem) rotate(-45deg);
     }
 }
