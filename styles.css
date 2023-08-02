@@ -79,6 +79,8 @@ a {
 
 .head-outer header {
     width: 100%;
+    max-width: 150rem;
+    margin: 0 auto;
     height: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 2fr 1fr;
@@ -89,7 +91,8 @@ a {
 
 .head-outer a:not(:nth-child(4)) {
     color: var(--color-04);
-    font-size: 1.6rem;
+    font-size: 2rem;
+    font-weight: 400;
     text-transform: uppercase;
     position: relative;
     z-index: 5;
