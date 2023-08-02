@@ -1,9 +1,15 @@
-html * {
+html{
     font-size: 10px;
+
+}
+
+html * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
+
+
 
 p,
 h1,
@@ -85,8 +91,7 @@ a {
     box-sizing: border-box;
 }
 
-.head-outer a {
-    padding: 1rem 2rem;
+.head-outer a:not(:nth-child(4)) {
     color: var(--color-04);
     font-size: 1.6rem;
     text-transform: uppercase;
@@ -167,7 +172,7 @@ a {
 
 @media screen and (max-width: 1000px) {
     .head-outer header {
-        grid-template-columns: 80px 5fr 80px;
+        grid-template-columns: 8rem 5fr 8rem;
     }
 
     .head-outer a:not(.nav-link-logo):not(.nav-link-sandwich) {
@@ -194,7 +199,7 @@ a {
         opacity: 0; /* Initially set to opacity: 0 */
         animation-name: fadeIn;
         animation-duration: .2s;
-        animation-delay: .3s; /* Add a 1s delay before the animation starts */
+        animation-delay: .2s; /* Add a 1s delay before the animation starts */
         animation-fill-mode: forwards;
       }
       
@@ -233,18 +238,18 @@ a {
     }
 
     .head-outer .nav-link-sandwich {
-        display: initial;
+        display: flex;
         grid-column: 3;
         height: 5rem;
         width: 5rem;
-        position: relative;
+        /* position: relative; */
     }
 
     .head-outer .nav-link-sandwich span:first-child {
         position: absolute;
-        font-size: 4rem;
+        font-size: 5rem;
         font-weight: 400;
-        top: 0%;
+        top: -15%;
         left: 50%;
         transform: translateX(-50%);
         line-height: 0;
@@ -253,11 +258,11 @@ a {
 
     .head-outer .nav-link-sandwich span:last-child {
         position: absolute;
-        font-size: 4rem;
-        top: 20%;
+        font-size: 5rem;
         font-weight: 400;
-        left: 50%;
         transform: translateX(-50%);
+        top: 15%;
+        left: 50%;
         line-height: 0;
         transition: all 0.4s ease-in-out;
     }
@@ -265,14 +270,14 @@ a {
     /* sandwich menu animation using spans */
 
     .head-outer.pressed .nav-link-sandwich span:first-child {
-        top: 22%;
-        left: 78%;
+        top: 14%;
+        left: 88%;
         transform: translateX(-50%) rotate(45deg);
     }
 
     .head-outer.pressed .nav-link-sandwich span:last-child {
-        top: 22%;
+        top: 14%;
         transform: translateX(-50%) rotate(-45deg);
-        left: 20%;
+        left: 18%;
     }
 }
