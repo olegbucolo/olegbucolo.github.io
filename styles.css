@@ -106,7 +106,7 @@ a {
 .head-outer .current::after {
     content: "";
     position: absolute;
-    bottom: 0.5rem;
+    bottom: 0rem;
     background-color: var(--color-03);
     height: 0.1rem;
     left: 0;
@@ -117,7 +117,7 @@ a {
     a:hover:not(:nth-child(4)):not(:nth-child(6)):not(.current)::before {
     content: "";
     position: absolute;
-    bottom: 0.5rem;
+    bottom: 0rem;
     background-color: var(--color-03);
     height: 0.1rem;
     left: 0;
