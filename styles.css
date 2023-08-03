@@ -193,6 +193,7 @@ a {
     background-size: 100%;
     background-position: left bottom;
     filter: opacity(70%) blur(1rem);
+    z-index: 1;
 }
 
 .body-01-01 .img2 {
@@ -203,10 +204,23 @@ a {
     top: -15vh;
     background-image: url(/IMG/PNG/optimized/home/eth-form-02-ase.png);
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: 100%;
     background-position: right bottom;
     filter: opacity(90%) blur(1rem);
     transform: rotate(180deg) translate(2vw, 3vw);
+    z-index: 1; 
+}
+
+.body-01-01-content{
+    padding: 0 5rem;  
+    color: var(--color-04);
+    line-height: 9rem;
+    font-size: 5rem;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    z-index: 2;
 }
 
 /* TODO: */
@@ -217,9 +231,6 @@ a {
 
 @media screen and (max-width: 1050px) {
     .body-01-01 .img {
-        height: 100%;
-        width: 50%;
-        left: -5vw;
         bottom: 20vh;
         background-size: contain;
 
@@ -248,7 +259,9 @@ a {
     .head-outer.pressed {
         height: 100vh;
         background-size: cover;
+        filter: opacity(100%);
         transition: height 0.2s ease-in-out;
+
     }
 
     .head-outer.pressed header {
@@ -343,12 +356,22 @@ a {
     }
 }
 
+@media screen and (max-width: 725px){
+    .body-01-01-content{
+        padding: 0 2rem;  
+        color: var(--color-04);
+        line-height: 8rem;
+        font-size: 4rem;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
 
 @media screen and (max-width: 600px) {
     .body-01-01 .img{
-        height: 100%;
-        width: 50%;
-        left: -5vw;
         bottom: 20vh;
         background-size: 150%;
     background-position: right bottom;
@@ -368,8 +391,6 @@ a {
 @media screen and (max-width: 624px){
     .body-outer-01 {
         background-size: contain ;
-
-        
     }
 
     .head-outer {
@@ -377,11 +398,22 @@ a {
     }
 }
 
+@media screen and (max-width: 475px){
+    .body-01-01-content{
+        padding: 0 1rem 0 2rem;  
+        color: var(--color-04);
+        line-height: 6rem;
+        font-size: 9vw;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
 @media screen and (max-width: 450px) {
     .body-01-01 .img{
-        height: 100%;
-        width: 50%;
-        left: -5vw;
         bottom: 30vh;
         background-size: 150%;
     background-position: right bottom;
@@ -395,5 +427,13 @@ a {
         top: 35vh;
         background-size: contain;
         filter: opacity(90%) blur(.7rem) ;
+    }
+}
+
+@media screen and (max-width: 325px){
+    .body-01-01-content{
+        padding: 0 0 0 1rem;  
+        color: var(--color-04);
+        line-height: 5rem;
     }
 }
