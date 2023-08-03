@@ -1,18 +1,35 @@
-// Get references to the parallax images
-const img = document.querySelector('.img');
-const img2 = document.querySelector('.img2');
-const parallaxImage0201 = document.querySelectorAll('.parallax-img-02-01');
-const parallaxImage0202 = document.querySelectorAll('.parallax-img-02-02');
+const img01 = document.querySelector('.img01');
+const img01Styles = window.getComputedStyle(img01);
+const img01Bottom = img01Styles.getPropertyValue('bottom');
+console.log('the bottom of the img01 is: ' + img01Bottom);
+const img01BottomParsed = removePx(img01Bottom);
+console.log('the bottom of the img01 WITHOUT PX is: ' + img01BottomParsed);
 
+const img02 = document.querySelector('.img02');
+const img02Styles = window.getComputedStyle(img02);
+const img02Bottom = img02Styles.getPropertyValue('bottom');
+console.log('the bottom of the img02 is: ' + img02Bottom);
+const img02BottomParsed = removePx(img02Bottom);
+console.log('the bottom of the img02 WITHOUT PX is: ' + img02BottomParsed);
 
-// Add an event listener to the window's scroll event
-window.addEventListener('scroll', function() {
-  // Get the scroll position and viewport height
-  const value = window.scrollY;
+// console.log('the scroll is: ' + s);
+
+window.addEventListener('scroll', function(){
+    let s = window.scrollY;
+    
+    const img01AdjustedBottom = (s * 1 + img01BottomParsed) + 'px';
+    img01.style.setProperty('bottom', img01AdjustedBottom);
+    console.log('the bottom img01 is: ' + img01AdjustedBottom);
+
+    const img02AdjustedBottom = (img02BottomParsed - s * 2) + 'px';
+    img02.style.setProperty('bottom', img02AdjustedBottom);
+    console.log('the bottom img02 is: ' + img02AdjustedBottom);
+
+})
+
+// removing px from value like '270.2879px' 
+
+function removePx(valueWithPx) {
+    return parseFloat(valueWithPx);
+  }
   
-  img.style.bottom = value * .1 + 'vh'; 
-  img2.style.top = value * -.1 + 'vh';
-  parallaxImage0201.style.marginTop = value * 2 + 'px';
-  parallaxImage0202.style.marginTop = value * 2 + 'px';
-  
-});
