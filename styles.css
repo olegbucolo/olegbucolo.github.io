@@ -182,7 +182,7 @@ a {
     position: relative;
 }
 
-.body-01-01 .img {
+.img {
     position: absolute;
     height: 100%;
     width: 50%;
@@ -196,7 +196,7 @@ a {
     z-index: 1;
 }
 
-.body-01-01 .img2 {
+.img2 {
     position: absolute;
     height: 100%;
     width: 50%;
@@ -207,12 +207,12 @@ a {
     background-size: 100%;
     background-position: right bottom;
     filter: opacity(90%) blur(1rem);
-    transform: rotate(180deg) translate(2vw, 3vw);
-    z-index: 1; 
+    transform: rotate(180deg) translateX(2vw) translateY(3vw);
+    z-index: 1;
 }
 
-.body-01-01-content{
-    padding: 0 5rem;  
+.body-01-01-content {
+    padding: 0 5rem;
     color: var(--color-04);
     line-height: 9rem;
     font-size: 5rem;
@@ -220,6 +220,7 @@ a {
     width: 100%;
     display: flex;
     justify-content: center;
+    align-items: center;
     z-index: 2;
 }
 
@@ -230,14 +231,14 @@ a {
 } */
 
 @media screen and (max-width: 1050px) {
-    .body-01-01 .img {
+    .img {
         bottom: 20vh;
         background-size: contain;
 
         filter: opacity(70%) blur(1rem);
     }
 
-    .body-01-01 .img2 {
+    .img2 {
         height: 100%;
         width: 50%;
         right: -7vw;
@@ -261,7 +262,6 @@ a {
         background-size: cover;
         filter: opacity(100%);
         transition: height 0.2s ease-in-out;
-
     }
 
     .head-outer.pressed header {
@@ -356,9 +356,9 @@ a {
     }
 }
 
-@media screen and (max-width: 725px){
-    .body-01-01-content{
-        padding: 0 2rem;  
+@media screen and (max-width: 725px) {
+    .body-01-01-content {
+        padding: 0 2rem;
         color: var(--color-04);
         line-height: 8rem;
         font-size: 4rem;
@@ -371,26 +371,26 @@ a {
 }
 
 @media screen and (max-width: 600px) {
-    .body-01-01 .img{
+    .img {
         bottom: 20vh;
         background-size: 150%;
-    background-position: right bottom;
-        filter: opacity(70%) blur(.7rem) ;
+        background-position: right bottom;
+        filter: opacity(70%) blur(0.7rem);
     }
-    
-    .body-01-01 .img2{
+
+    .img2 {
         height: 100%;
         width: 50%;
         right: -7vw;
         top: 30vh;
         background-size: contain;
-        filter: opacity(90%) blur(.7rem) ;
+        filter: opacity(90%) blur(0.7rem);
     }
 }
 
-@media screen and (max-width: 624px){
+@media screen and (max-width: 624px) {
     .body-outer-01 {
-        background-size: contain ;
+        background-size: contain;
     }
 
     .head-outer {
@@ -398,9 +398,9 @@ a {
     }
 }
 
-@media screen and (max-width: 475px){
-    .body-01-01-content{
-        padding: 0 1rem 0 2rem;  
+@media screen and (max-width: 475px) {
+    .body-01-01-content {
+        padding: 0 1rem 0 2rem;
         color: var(--color-04);
         line-height: 6rem;
         font-size: 9vw;
@@ -413,26 +413,26 @@ a {
 }
 
 @media screen and (max-width: 450px) {
-    .body-01-01 .img{
+    .img {
         bottom: 30vh;
         background-size: 150%;
-    background-position: right bottom;
-        filter: opacity(70%) blur(.7rem) ;
+        background-position: right bottom;
+        filter: opacity(70%) blur(0.7rem);
     }
-    
-    .body-01-01 .img2{
+
+    .img2 {
         height: 100%;
         width: 50%;
         right: -7vw;
         top: 35vh;
         background-size: contain;
-        filter: opacity(90%) blur(.7rem) ;
+        filter: opacity(90%) blur(0.7rem);
     }
 }
 
-@media screen and (max-width: 325px){
-    .body-01-01-content{
-        padding: 0 0 0 1rem;  
+@media screen and (max-width: 325px) {
+    .body-01-01-content {
+        padding: 0 0 0 1rem;
         color: var(--color-04);
         line-height: 5rem;
     }
