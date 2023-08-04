@@ -17,11 +17,11 @@ console.log('the bottom of the img02 WITHOUT PX is: ' + img02BottomParsed);
 window.addEventListener('scroll', function(){
     let s = window.scrollY;
     
-    const img01AdjustedBottom = (s * 1 + img01BottomParsed) + 'px';
+    const img01AdjustedBottom = (img01BottomParsed + s * 1.8) + 'px';
     img01.style.setProperty('bottom', img01AdjustedBottom);
     console.log('the bottom img01 is: ' + img01AdjustedBottom);
 
-    const img02AdjustedBottom = (img02BottomParsed - s * 2) + 'px';
+    const img02AdjustedBottom = (img02BottomParsed - s * 1.8) + 'px';
     img02.style.setProperty('bottom', img02AdjustedBottom);
     console.log('the bottom img02 is: ' + img02AdjustedBottom);
 

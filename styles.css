@@ -193,7 +193,7 @@ a {
     background-repeat: no-repeat;
     background-size: 100%;
     background-position: center;
-    filter: opacity(70%) blur(1rem);
+    filter: opacity(60%) blur(1rem);
 }
 
 .img02 {
@@ -207,7 +207,7 @@ a {
     background-repeat: no-repeat;
     background-size: 100%;
     background-position: center;
-    filter: opacity(70%) blur(1rem);
+    filter: opacity(50%) blur(1rem);
 }
 
 .body-01-01-content {
@@ -398,10 +398,10 @@ a {
 
 @media screen and (max-width: 400px){
     .img01{
-        width: 100%;
+        width: 80%;
     }
     .img02{
-        width: 100%;
+        width: 80%;
     }
 }
 
