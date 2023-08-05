@@ -102,7 +102,7 @@ a {
 
 .head-outer a:not(.nav-link-logo):not(.nav-link-sandwich):not(.current) {
     color: var(--color-04);
-    font-size: 2rem;
+    font-size: 2.2rem;
     font-weight: 400;
     text-transform: uppercase;
     position: relative;
@@ -111,7 +111,7 @@ a {
 
 .head-outer .current {
     color: var(--color-03);
-    font-size: 2rem;
+    font-size: 2.2rem;
     font-weight: 400;
     text-transform: uppercase;
     position: relative;
@@ -252,41 +252,27 @@ a {
     flex-direction: column;
     color: var(--color-04);
     text-align: center;
-    /* background-color: yellow; */
 }
 
 .card-title-01, .card-title-02 {
-    /* height: 120rem; */
     font-size: 5rem;
-    /* padding-bottom: 4rem; */
     position: relative;
 }
 
-.card-title-01::before{
+.card-title-01::before, .card-title-02::before{
     position: absolute;
     content: "";
-    left: 0;
-    top: 7rem;
-    width: 33rem;
-    height: .4rem;
+    top: 6rem;
+    height: .5rem;
     background-color: #0E2954;
-}
-
-.card-title-02::before{
-    position: absolute;
-    content: "";
-    left: 0;
-    top: 7rem;
-    width: 33rem;
-    height: .4rem;
-    background-color: #0E2954;
+    left: 0; 
+    right: 0;
 }
 
 .body-01-02-grid {
     height: 100%;
     width: 100%;
     display: grid;
-    /* grid-column: ; */
     grid-template-columns: max-content 1fr;
     grid-template-rows: repeat(2, 1fr);
     row-gap: 4rem;
@@ -295,14 +281,12 @@ a {
 
 .body-01-02-grid li{
     width: 100%;
-    /* background-color: rgba(14, 41, 84, .3); */
-    
     border-radius: 2rem;
-    box-shadow:  1rem 1rem 2rem -.5rem var(--color-04),  -1rem -1rem 2rem -.5rem white;
+    /* box-shadow:  1rem 1rem 2rem -.5rem var(--color-04),  -1rem -1rem 2rem -.5rem white; */
     display: flex;
     flex-direction: column;
     justify-content: start;
-    padding: 4rem 3rem;
+    padding: 1rem 3rem;
 }
 
 .card-content{
@@ -310,7 +294,7 @@ a {
 }
 
 .card-content h1{
-    font-size: 2rem;
+    font-size: 2.4rem;
     padding: 0;
     text-align: start;
     padding-bottom: .4rem;
@@ -319,7 +303,7 @@ a {
 
 .card-content p{
     text-align: start;
-    font-size: 1.4rem;
+    font-size: 1.8rem;
 }
 
 /* TODO: */
@@ -444,14 +428,8 @@ a {
         grid-template-columns: 1fr;
         grid-template-rows: min-content 1fr min-content min-content;
     }
-    .card-title-01::before{
-        left: 50%;
-        transform: translateX(-50%);
-    }
-    .card-title-02::before{
-        left: 50%;
-        transform: translateX(-50%);
-    }
+
+    
 }
 
 @media screen and (max-width: 725px) {
@@ -522,6 +500,29 @@ a {
     .img02 {
         width: 80%;
     }
+
+    .card-title-01, .card-title-02 {
+        /* height: 120rem; */
+        font-size: 4rem;
+    }
+
+    .card-title-01::before, .card-title-02::before{
+        top: 5rem;
+    }
+
+}
+
+@media screen and (max-width: 350px){
+    .card-title-01::before, .card-title-02::before{
+        top: 4rem;
+
+    }
+
+    .card-title-01, .card-title-02 {
+        /* height: 120rem; */
+        font-size: 3rem;
+    }
+
 }
 
 @media screen and (max-width: 325px) {

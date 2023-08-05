@@ -27,11 +27,11 @@ window.addEventListener('scroll', function(){
     //of the element we want to parallax scroll )
     // let hT = h + img03BottomParsed;
     
-    const img01AdjustedBottom = (img01BottomParsed + s * 1.8) + 'px';
+    const img01AdjustedBottom = (img01BottomParsed + s * -.8) + 'px';
     img01.style.setProperty('bottom', img01AdjustedBottom);
     console.log('the bottom img01 is: ' + img01AdjustedBottom);
 
-    const img02AdjustedBottom = (img02BottomParsed - s * 1.8) + 'px';
+    const img02AdjustedBottom = (img02BottomParsed - s * 1.2) + 'px';
     img02.style.setProperty('bottom', img02AdjustedBottom);
     console.log('the bottom img02 is: ' + img02AdjustedBottom);
 
