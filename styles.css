@@ -42,10 +42,17 @@ a {
 }
 
 :root {
-    --color-01: #eeecda;
+
+    /* --color-01: #eeecda;
     --color-02: #f08a5d;
     --color-03: #b83b5e;
-    --color-04: #6a2c70;
+    --color-04: #6a2c70; */
+
+    --color-01: #84A7A1;
+    --color-02: #2E8A99;
+    --color-03: #1F6E8C;
+    --color-04: #0E2954;
+
 }
 
 /* TODO: THEMES */
@@ -156,6 +163,7 @@ a {
 }
 
 .body-outer-01 {
+    position: relative;
     width: 100%;
     height: 100%;
     background-position: center top;
@@ -172,7 +180,8 @@ a {
         url(/IMG/PNG/optimized/b-background-01.jpg);
 }
 
-.body-01-01 {
+.body-01-01,
+.body-01-02 {
     width: 100%;
     max-width: 150rem;
     height: 100vh;
@@ -180,6 +189,11 @@ a {
     margin: 0 auto;
     overflow: hidden;
     position: relative;
+    padding: 0 5rem;
+}
+
+.body-01-02{
+    height: initial;
 }
 
 .img01 {
@@ -193,7 +207,8 @@ a {
     background-repeat: no-repeat;
     background-size: 100%;
     background-position: center;
-    filter: opacity(60%) blur(1rem);
+    filter: opacity(60%) blur(0.2rem);
+    pointer-events: none;
 }
 
 .img02 {
@@ -207,11 +222,11 @@ a {
     background-repeat: no-repeat;
     background-size: 100%;
     background-position: center;
-    filter: opacity(50%) blur(1rem);
+    filter: opacity(50%) blur(0.2rem);
+    pointer-events: none;
 }
 
 .body-01-01-content {
-    padding: 0 5rem;
     color: var(--color-04);
     line-height: 9rem;
     font-size: 5rem;
@@ -221,6 +236,68 @@ a {
     justify-content: center;
     align-items: center;
     z-index: 2;
+    user-select: none;
+}
+
+.body-01-02 {
+    /* background-color: red; */
+    padding-top: 10rem;
+}
+
+.body-01-02-content {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    color: var(--color-04);
+    text-align: center;
+    /* background-color: yellow; */
+}
+
+.body-01-02-content h1 {
+    /* height: 120rem; */
+    font-size: 5rem;
+    padding-bottom: 4rem;
+}
+
+.body-01-02-grid {
+    height: 100%;
+    width: 100%;
+    display: grid;
+    /* grid-column: ; */
+    grid-template-columns: repeat(2, 1fr);
+    /* grid-template-rows: repeat(2, 1fr); */
+    row-gap: 4rem;
+    column-gap: 4rem;
+}
+
+.body-01-02-grid li{
+    width: 100%;
+    /* background-color: rgba(14, 41, 84, .3); */
+    
+    border-radius: 2rem;
+    box-shadow:  1rem 1rem 2rem -.5rem var(--color-04),  -1rem -1rem 2rem -.5rem white;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    padding: 4rem 3rem;
+}
+
+.card-content{
+    padding-bottom: 2rem;
+}
+
+.card-content h1{
+    font-size: 2rem;
+    padding: 0;
+    text-align: start;
+    padding-bottom: .4rem;
+    color: var(--color-04);
+}
+
+.card-content p{
+    text-align: start;
+    font-size: 1.4rem;
 }
 
 /* TODO: */
@@ -230,7 +307,6 @@ a {
 } */
 
 @media screen and (max-width: 1050px) {
-
 }
 
 @media screen and (max-width: 1000px) {
@@ -341,31 +417,34 @@ a {
     }
 }
 
+@media screen and (max-width: 850px){
+    .body-01-02-grid{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+}
+
 @media screen and (max-width: 725px) {
     .body-01-01-content {
-        padding: 0 2rem;
-        color: var(--color-04);
         line-height: 8rem;
         font-size: 4rem;
-        height: 100%;
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
     }
 
-    .img01{
+    .body-01-01,
+    .body-01-02 {
+        padding: 6rem 2rem;
+    }
+
+    .img01 {
         width: 75%;
     }
 
-    .img02{
+    .img02 {
         width: 75%;
-        
     }
 }
 
 @media screen and (max-width: 600px) {
-
 }
 
 @media screen and (max-width: 624px) {
@@ -380,27 +459,24 @@ a {
 
 @media screen and (max-width: 475px) {
     .body-01-01-content {
-        padding: 0 1rem 0 2rem;
-        color: var(--color-04);
         line-height: 6rem;
         font-size: 9vw;
-        height: 100%;
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+    }
+
+    .body-01-01,
+    .body-01-02 {
+        padding: 4rem 1rem 0 1rem;
     }
 }
 
 @media screen and (max-width: 450px) {
-
 }
 
-@media screen and (max-width: 400px){
-    .img01{
+@media screen and (max-width: 400px) {
+    .img01 {
         width: 80%;
     }
-    .img02{
+    .img02 {
         width: 80%;
     }
 }
