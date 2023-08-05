@@ -2,6 +2,8 @@ html {
     font-size: 10px;
     margin: 0;
     padding: 0;
+    font-family: 'Nunito', sans-serif;
+font-family: 'Raleway', sans-serif;
 }
 
 * {
@@ -185,16 +187,18 @@ a {
     width: 100%;
     max-width: 150rem;
     height: 100vh;
-    padding-top: 6rem;
+    padding-top: 2rem;
     margin: 0 auto;
-    overflow: hidden;
+    overflow: visible;
     position: relative;
-    padding: 0 5rem;
+    padding: 4rem 5rem 4rem 5rem;
 }
 
 .body-01-02{
     height: initial;
 }
+
+
 
 .img01 {
     position: absolute;
@@ -239,10 +243,7 @@ a {
     user-select: none;
 }
 
-.body-01-02 {
-    /* background-color: red; */
-    padding-top: 10rem;
-}
+
 
 .body-01-02-content {
     height: 100%;
@@ -254,10 +255,31 @@ a {
     /* background-color: yellow; */
 }
 
-.body-01-02-content h1 {
+.card-title-01, .card-title-02 {
     /* height: 120rem; */
     font-size: 5rem;
-    padding-bottom: 4rem;
+    /* padding-bottom: 4rem; */
+    position: relative;
+}
+
+.card-title-01::before{
+    position: absolute;
+    content: "";
+    left: 0;
+    top: 7rem;
+    width: 33rem;
+    height: .4rem;
+    background-color: #0E2954;
+}
+
+.card-title-02::before{
+    position: absolute;
+    content: "";
+    left: 0;
+    top: 7rem;
+    width: 33rem;
+    height: .4rem;
+    background-color: #0E2954;
 }
 
 .body-01-02-grid {
@@ -265,8 +287,8 @@ a {
     width: 100%;
     display: grid;
     /* grid-column: ; */
-    grid-template-columns: repeat(2, 1fr);
-    /* grid-template-rows: repeat(2, 1fr); */
+    grid-template-columns: max-content 1fr;
+    grid-template-rows: repeat(2, 1fr);
     row-gap: 4rem;
     column-gap: 4rem;
 }
@@ -420,7 +442,15 @@ a {
 @media screen and (max-width: 850px){
     .body-01-02-grid{
         grid-template-columns: 1fr;
-        grid-template-rows: 1fr 1fr;
+        grid-template-rows: min-content 1fr min-content min-content;
+    }
+    .card-title-01::before{
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .card-title-02::before{
+        left: 50%;
+        transform: translateX(-50%);
     }
 }
 
@@ -441,6 +471,12 @@ a {
 
     .img02 {
         width: 75%;
+    }
+
+    .card-title::before{
+        left: 50%;
+        transform: translateX(-50%);
+        top: 12rem;
     }
 }
 
@@ -467,6 +503,13 @@ a {
     .body-01-02 {
         padding: 4rem 1rem 0 1rem;
     }
+
+    .card-title::before{
+        left: 50%;
+        transform: translateX(-50%);
+        top: 10rem;
+    }
+    
 }
 
 @media screen and (max-width: 450px) {
