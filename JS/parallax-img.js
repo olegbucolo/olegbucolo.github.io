@@ -1,45 +1,59 @@
-// IMG 01 JS
+// Parallax scrolling function
+function parallaxScroll(element, initialBottom, factor) {
+    const adjustedBottom = initialBottom + window.scrollY * factor + "px";
+    element.style.setProperty("bottom", adjustedBottom);
+}
 
-const img01 = document.querySelector('.img01');
-const img01Styles = window.getComputedStyle(img01);
-const img01Bottom = img01Styles.getPropertyValue('bottom');
-// console.log('the bottom of the img01 is: ' + img01Bottom);
-const img01BottomParsed = removePx(img01Bottom);
-// console.log('the bottom of the img01 WITHOUT PX is: ' + img01BottomParsed);
+// Elements
+const img01 = document.querySelector(".img01");
+const img02 = document.querySelector(".img02");
+const footer = document.querySelector(".foot-outer");
 
-// IMG 02 JS
+// Initial values
+const img01BottomParsed = removePx(
+    window.getComputedStyle(img01).getPropertyValue("bottom")
+);
+const img02BottomParsed = removePx(
+    window.getComputedStyle(img02).getPropertyValue("bottom")
+);
 
+// Track the last known scroll position
+let lastScrollY = window.scrollY;
 
-const img02 = document.querySelector('.img02');
-const img02Styles = window.getComputedStyle(img02);
-const img02Bottom = img02Styles.getPropertyValue('bottom');
-// console.log('the bottom of the img02 is: ' + img02Bottom);
-const img02BottomParsed = removePx(img02Bottom);
-// console.log('the bottom of the img02 WITHOUT PX is: ' + img02BottomParsed);
+// Scroll event handler
+function handleScroll() {
+    const footerTop = footer.getBoundingClientRect().top;
+    const footerBottom = footer.getBoundingClientRect().bottom;
+    const img02Bottom = img02.getBoundingClientRect().bottom;
 
-// console.log('the scroll is: ' + s);
+    if (footerTop >= img02Bottom+700) {
+        // Footer is still above the viewport or scrolling up,
+        // continue parallax effect
 
-window.addEventListener('scroll', function(){
-    let s = window.scrollY;
-    let h = window.innerHeight;
-    // used to add the innerHeight(the total height of the 
-    // current viewport + the height of the top or bottom 
-    //of the element we want to parallax scroll )
-    // let hT = h + img03BottomParsed;
-    
-    const img01AdjustedBottom = (img01BottomParsed + s * -.8) + 'px';
-    img01.style.setProperty('bottom', img01AdjustedBottom);
-    // console.log('the bottom img01 is: ' + img01AdjustedBottom);
+        parallaxScroll(img01, img01BottomParsed, -0.8);
+        parallaxScroll(img02, img02BottomParsed, -1.2);
 
-    const img02AdjustedBottom = (img02BottomParsed - s * 1.2) + 'px';
-    img02.style.setProperty('bottom', img02AdjustedBottom);
-    // console.log('the bottom img02 is: ' + img02AdjustedBottom);
+        console.log("lastY : " + lastScrollY);
 
-})
+        // if(img02Bottom <=)
+    }
 
-// removing px from value like '270.2879px' 
+    // Update the last known scroll position
+}
 
+// Debounced scroll event listener
+let isScrolling = false;
+window.addEventListener("scroll", () => {
+    if (!isScrolling) {
+        isScrolling = true;
+        requestAnimationFrame(() => {
+            handleScroll();
+            isScrolling = false;
+        });
+    }
+});
+
+// Helper function to remove "px" from a value
 function removePx(valueWithPx) {
     return parseFloat(valueWithPx);
-  }
-  
+}

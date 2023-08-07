@@ -67,7 +67,7 @@ a {
 
 .body-container {
     width: 100%;
-    height: 1000rem;
+    /* height: 1000rem; */
     background-color: var(--color-01);
 }
 
@@ -81,7 +81,7 @@ a {
     background-position: center bottom;
     background-repeat: no-repeat;
     background-size: 140%;
-    z-index: 2;
+    z-index: 1;
     filter: opacity(90%);
     transition: height 0.2s ease-in-out;
 }
@@ -104,7 +104,7 @@ a {
     font-weight: 400;
     text-transform: uppercase;
     position: relative;
-    z-index: 5;
+    z-index: 2;
 }
 
 .head-outer .current {
@@ -155,7 +155,7 @@ a {
     line-height: 6rem;
 }
 
-/* BODY */
+/* BODY ******************************************************************************************************************** */
 
 .body-outer {
     width: 100%;
@@ -167,7 +167,7 @@ a {
     width: 100%;
     height: 100%;
     background-position: center top;
-    background-size: 250%;
+    background-size: 100%;
     background-repeat: no-repeat;
     background-image: linear-gradient(
             to right,
@@ -177,6 +177,7 @@ a {
             rgba(255, 255, 255, 0) 100%
         ),
         url(/IMG/PNG/optimized/b-background-01.jpg);
+        box-sizing: border-box;
 }
 
 .body-01-01,
@@ -189,7 +190,7 @@ a {
     margin: 0 auto;
     overflow: visible;
     position: relative;
-    padding: 4rem 5rem 0rem 5rem;
+    padding: 4rem 5rem 5rem 5rem;
 }
 
 .body-01-02 {
@@ -239,7 +240,6 @@ a {
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 2;
     user-select: none;
 }
 
@@ -328,7 +328,7 @@ a {
 .home_contact_form label {
     padding-top: 5rem;
     text-align: start;
-    font-size: 2.8rem;
+    font-size: 2.2rem;
     padding-bottom: 1rem;
     opacity: .9;
 }
@@ -352,14 +352,12 @@ a {
 }
 
 @keyframes inputHeight {
-    0% { height: 5.2rem;}
     25% { height: 6rem;}
-    100% { height: 5.2rem;}
 }
 
 @keyframes textareaHeight {
     
-    25% { height: 35rem;}
+    25% { height: 31rem;}
     
 }
 
@@ -376,8 +374,8 @@ a {
 .home_contact_form input:focus{
     /* height: 6rem; */
     /* transition: height .4s ease-in-out; */
+    transition: width 0.4s ease-in-out;
     animation: inputHeight 1s ;
-    transition: width 0.4s ease;
 
 }
 
@@ -396,6 +394,79 @@ a {
 /* *::-webkit-scrollbar {
     display: none;
 } */
+
+
+/* footer ******************************************************************************************************************** */
+
+.foot-outer{
+    height: 25vh;
+    width: 100%;
+    background-color: var(--color-04);
+    overflow: hidden;
+   
+    
+}
+
+.foot-outer-150 {
+    width: 100%;
+    max-width: 150rem;
+    height: 100%;
+    /* background-color: #140e54; */
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+}
+
+.foot-outer-150 .social{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:2.5rem;
+}
+
+.foot-outer-150 .address, .foot-outer-150 .legal{
+    width: 100%;
+    height: 100%;
+    color: var(--color-01);
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    text-align:center;
+}
+
+.foot-outer-150 .address::before{
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: .1rem;
+    background-color: var(--color-01);
+    bottom: 0;
+}
+
+
+.foot-outer-150 .legal{
+    width: 100%;
+    height: 50%;   
+    font-size: 1.8rem;
+    text-decoration: underline;
+}
+
+.foot-outer-150 svg{
+    fill: var(--color-01);
+    height: 4rem;
+    width: 4rem;
+}
+
+.foot-outer-150 svg:hover{
+
+    fill: #ffffff;
+
+}
+
 
 @media screen and (max-width: 1050px) {
 }
@@ -524,7 +595,7 @@ a {
     .body-01-01,
     .body-01-02,
     .body-01-03 {
-        padding: 6rem 2rem 0 2rem;
+        padding: 6rem 2rem 5rem 2rem;
     }
 
     .img01 {
@@ -547,7 +618,7 @@ a {
 
 @media screen and (max-width: 624px) {
     .body-outer-01 {
-        background-size: 150%;
+        background-size: 200%;
     }
 
     .head-outer {
@@ -564,7 +635,7 @@ a {
     .body-01-01,
     .body-01-02,
     .body-01-03 {
-        padding: 4rem 1rem 0 1rem;
+        padding: 4rem 1rem 4rem 1rem;
     }
 
     .card-title::before {
