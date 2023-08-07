@@ -411,14 +411,16 @@ a {
 
 .img-footer{
     position: absolute;
-    top: 0;
+    
     bottom: 0;
     left: 0;
-    right: 0;
-    background-image: url(/IMG/PNG/optimized/nav-01.jpg);
-    background-position: 90% top;
-    background-repeat: no-repeat;
-    background-size: 1400%;
+    height: 100%;
+    width: 100%;
+    background-color: var(--color-04);
+    /* background-image: url(/IMG/PNG/optimized/nav-01.jpg); */
+    /* background-position: 90% bottom; */
+    /* background-repeat: no-repeat; */
+    /* background-size: 200%; */
 }
 
 .foot-outer-150 {
@@ -442,7 +444,7 @@ a {
 .foot-outer-150 .address, .foot-outer-150 .legal{
     width: 100%;
     height: 100%;
-    color: var(--color-04);
+    color: var(--color-01);
     font-size: 1.8rem;
     display: flex;
     justify-content: center;
@@ -456,16 +458,12 @@ a {
     padding-top: 2rem;
 }
 
-.foot-outer-150 .address:hover{
-    color: var(--color-02);
-}
-
 .foot-outer-150 .address::before{
     position: absolute;
     content: "";
     width: 100%;
     height: .1rem;
-    background-color: var(--color-04);
+    background-color: var(--color-01);
     bottom: 0;
 }
 
@@ -484,15 +482,15 @@ a {
 }
 
 .social svg{
-    fill: var(--color-04);
+    fill: var(--color-01);
     height: 3rem;
     width: 3rem;
     z-index: 10;
 }
 
-.foot-outer-150 svg:hover{
-
-    fill: var(--color-02);
+.foot-outer-150 svg:hover, .address:hover{
+    color: white;
+    fill: white;
 
 }
 
@@ -608,6 +606,12 @@ a {
     .head-outer.pressed .nav-link-sandwich span:nth-child(3) {
         transform: translateY(-0.8rem) rotate(-45deg);
     }
+
+    .img-footer{
+        background-size: 275%;
+        background-position: 90% top;
+        
+    }
 }
 
 @media screen and (max-width: 850px) {
@@ -648,6 +652,13 @@ a {
         transform: translateX(-50%);
         top: 12rem;
     }
+
+    .img-footer{
+        background-size: 400%;
+        background-position: 90% top;
+        
+    }
+
 }
 
 @media screen and (max-width: 600px) {
@@ -683,6 +694,11 @@ a {
 }
 
 @media screen and (max-width: 450px) {
+    .img-footer{
+        background-size: 1000%;
+        background-position: 90% top;
+        
+    }
 }
 
 @media screen and (max-width: 400px) {
