@@ -10,3 +10,12 @@ sandwich.addEventListener('click', function(event){
     // adds the class .no-scroll to set a overflow: hidden to the body when the menu is opened
     document.body.classList.toggle('no-scroll');
 })
+
+const screenSize = window.innerHeight;
+
+window.addEventListener('scroll', () => {
+    // let scrolling = window.scrollY;
+    // console.log('screen size: ' + screenSize);
+    // console.log('scroll size: ' + scrolling);
+
+})

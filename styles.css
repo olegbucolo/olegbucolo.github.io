@@ -77,14 +77,16 @@ a {
     right: 0;
     padding: 0 1rem;
     height: 6rem;
-    background-image: url(/IMG/PNG/optimized/nav-01.jpg);
+    background-image:  url(/IMG/PNG/optimized/nav-01.jpg);
     background-position: center bottom;
     background-repeat: no-repeat;
     background-size: 140%;
-    z-index: 3;
-    filter: opacity(98%);
+    z-index: 3;;
+    
     transition: height 0.2s ease-in-out;
 }
+
+
 
 .head-outer header {
     width: 100%;
@@ -203,9 +205,9 @@ a {
 
 .img01 {
     position: absolute;
-    bottom: 69%;
+    bottom: 63%;
     left: 0;
-    height: 80rem;
+    height: 120rem;
     width: 50%;
     background-image: url(/IMG/PNG/optimized/home/img01-large.png);
     background-repeat: no-repeat;
@@ -219,9 +221,9 @@ a {
 
 .img02 {
     position: absolute;
-    bottom: 75%;
+    bottom: 70%;
     right: 0;
-    height: 80rem;
+    height: 120rem;
     width: 50%;
     background-image: url(/IMG/PNG/optimized/home/img02-large.png);
     background-repeat: no-repeat;
@@ -291,7 +293,7 @@ a {
     display: flex;
     flex-direction: column;
     justify-content: start;
-    padding: 1rem 3rem;
+    padding: 1rem 2rem;
 }
 
 .card-content {
@@ -403,17 +405,26 @@ a {
 .foot-outer{
     height: 25vh;
     width: 100%;
-    background-color: var(--color-04);
     overflow: hidden;
-   
-    
+    position: relative;
+}
+
+.img-footer{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-image: url(/IMG/PNG/optimized/nav-01.jpg);
+    background-position: 90% top;
+    background-repeat: no-repeat;
+    background-size: 1400%;
 }
 
 .foot-outer-150 {
     width: 100%;
     max-width: 150rem;
     height: 100%;
-    /* background-color: #140e54; */
     display: flex;
     flex-direction: column;
     margin: 0 auto;
@@ -431,7 +442,7 @@ a {
 .foot-outer-150 .address, .foot-outer-150 .legal{
     width: 100%;
     height: 100%;
-    color: var(--color-01);
+    color: var(--color-04);
     font-size: 1.8rem;
     display: flex;
     justify-content: center;
@@ -446,7 +457,7 @@ a {
 }
 
 .foot-outer-150 .address:hover{
-    color: white;
+    color: var(--color-02);
 }
 
 .foot-outer-150 .address::before{
@@ -454,7 +465,7 @@ a {
     content: "";
     width: 100%;
     height: .1rem;
-    background-color: var(--color-01);
+    background-color: var(--color-04);
     bottom: 0;
 }
 
@@ -465,17 +476,23 @@ a {
     font-size: 1.6rem;
     text-decoration: underline ;
     font-style: italic;
+    
 }
 
-.foot-outer-150 svg{
-    fill: var(--color-01);
+.social a {
+    position: relative;
+}
+
+.social svg{
+    fill: var(--color-04);
     height: 3rem;
     width: 3rem;
+    z-index: 10;
 }
 
 .foot-outer-150 svg:hover{
 
-    fill: #ffffff;
+    fill: var(--color-02);
 
 }
 
@@ -484,6 +501,7 @@ a {
 }
 
 @media screen and (max-width: 1000px) {
+
     .head-outer header {
         grid-template-columns: 6rem 5fr 6rem;
     }
@@ -491,6 +509,7 @@ a {
     .head-outer a:not(.nav-link-logo):not(.nav-link-sandwich) {
         display: none;
     }
+
 
     .head-outer.pressed {
         height: 100vh;
@@ -612,8 +631,15 @@ a {
 
     .img01, .img02 {
         width: 100%;
-        height: 80rem;
-        
+        height: 60rem;
+    }
+
+    .img01{
+        bottom: 70%;
+    }
+
+    .img02{
+        bottom:80%
     }
 
 
@@ -666,11 +692,11 @@ a {
     }
 
     .img01{
-        bottom: 75%;
+        bottom: 70%;
     }
 
     .img02{
-        bottom: 85%;
+        bottom: 80%;
     }
 
     .card-title-01,
@@ -678,6 +704,11 @@ a {
     .card-title-email {
         /* height: 120rem; */
         font-size: 4rem;
+    }
+    
+    .body-01-02-grid li {
+
+        padding: 1rem 1rem;
     }
 
     .card-title-01::before,

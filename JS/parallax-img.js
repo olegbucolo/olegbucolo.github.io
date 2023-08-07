@@ -32,7 +32,7 @@ function handleScroll() {
         parallaxScroll(img01, img01BottomParsed, -0.80);
         parallaxScroll(img02, img02BottomParsed, -1.05);
 
-        console.log("lastY : " + lastScrollY);
+        // console.log("lastY : " + lastScrollY);
 
         // if(img02Bottom <=)
     
@@ -47,6 +47,7 @@ window.addEventListener("scroll", () => {
         isScrolling = true;
         requestAnimationFrame(() => {
             handleScroll();
+            
             isScrolling = false;
         });
     }
