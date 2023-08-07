@@ -23,20 +23,19 @@ let lastScrollY = window.scrollY;
 // Scroll event handler
 function handleScroll() {
     const footerTop = footer.getBoundingClientRect().top;
-    const footerBottom = footer.getBoundingClientRect().bottom;
     const img02Bottom = img02.getBoundingClientRect().bottom;
 
-    if (footerTop >= img02Bottom+700) {
+    
         // Footer is still above the viewport or scrolling up,
         // continue parallax effect
 
-        parallaxScroll(img01, img01BottomParsed, -0.8);
-        parallaxScroll(img02, img02BottomParsed, -1.2);
+        parallaxScroll(img01, img01BottomParsed, -0.80);
+        parallaxScroll(img02, img02BottomParsed, -1.05);
 
         console.log("lastY : " + lastScrollY);
 
         // if(img02Bottom <=)
-    }
+    
 
     // Update the last known scroll position
 }
