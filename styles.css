@@ -164,7 +164,7 @@ a {
     height: 100%;
 }
 
-.body-outer-01 {
+.body-outer-01, .body-work-outer-01 {
     position: relative;
     width: 100%;
     height: 100%;
@@ -181,6 +181,10 @@ a {
         url(/IMG/PNG/optimized/b-background-01.jpg);
         box-sizing: border-box;
     overflow: hidden;
+}
+
+.body-work-outer-01{
+    background-image: url(/IMG/PNG/optimized/work/oleg_bucolo_abstract_of_light_painting_by_emily_eugene_frederic_5d9e6335-476d-4260-85e1-e5c9b1366a27\ \(1\).jpg)
 }
 
 .body-01-01,
@@ -203,7 +207,7 @@ a {
 }
 
 
-.img01 {
+.img01, .img06 {
     position: absolute;
     bottom: 63%;
     left: 0;
@@ -219,7 +223,7 @@ a {
     z-index: 1;
 }
 
-.img02 {
+.img02, .img07 {
     position: absolute;
     bottom: 70%;
     right: 0;
@@ -233,6 +237,10 @@ a {
     pointer-events: none;
     overflow: hidden;
     z-index: 1;
+}
+
+.img06, .img07{
+    filter: opacity(60%) blur(0.4rem) hue-rotate(210deg);
 }
 
 .body-01-01-content {
@@ -488,6 +496,23 @@ a {
     z-index: 10;
 }
 
+.social a:nth-child(2)::before{
+    position: absolute;
+    content: "";
+    left: -1rem;
+    bottom: 0;
+    height: 100%;
+    width: .1rem;
+    background-color: white;
+}
+
+.social svg:nth-child(3)::before{
+
+}
+
+.social svg:nth-child(4)::before{
+
+}
 .foot-outer-150 svg:hover, .address:hover{
     color: white;
     fill: white;
@@ -633,16 +658,16 @@ a {
         padding: 6rem 2rem 5rem 2rem;
     }
 
-    .img01, .img02 {
+    .img01, .img02, .img06, .img07 {
         width: 100%;
         height: 60rem;
     }
 
-    .img01{
+    .img01, .img06{
         bottom: 70%;
     }
 
-    .img02{
+    .img02, .img07{
         bottom:80%
     }
 
@@ -665,7 +690,7 @@ a {
 }
 
 @media screen and (max-width: 624px) {
-    .body-outer-01 {
+    .body-outer-01, .body-work-outer-01 {
         background-size: 200%;
     }
 
@@ -702,16 +727,16 @@ a {
 }
 
 @media screen and (max-width: 400px) {
-    .img01, .img02{
+    .img01, .img02, .img06, .img07{
         width: 125%;
         height: 45rem;
     }
 
-    .img01{
+    .img01, .img06{
         bottom: 70%;
     }
 
-    .img02{
+    .img02, .img07{
         bottom: 80%;
     }
 

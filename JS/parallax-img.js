@@ -7,37 +7,20 @@ function parallaxScroll(element, initialBottom, factor) {
 // Elements
 const img01 = document.querySelector(".img01");
 const img02 = document.querySelector(".img02");
-const footer = document.querySelector(".foot-outer");
 
 // Initial values
 const img01BottomParsed = removePx(
     window.getComputedStyle(img01).getPropertyValue("bottom")
 );
+
 const img02BottomParsed = removePx(
     window.getComputedStyle(img02).getPropertyValue("bottom")
 );
 
-// Track the last known scroll position
-let lastScrollY = window.scrollY;
-
 // Scroll event handler
 function handleScroll() {
-    const footerTop = footer.getBoundingClientRect().top;
-    const img02Bottom = img02.getBoundingClientRect().bottom;
-
-    
-        // Footer is still above the viewport or scrolling up,
-        // continue parallax effect
-
-        parallaxScroll(img01, img01BottomParsed, -0.80);
-        parallaxScroll(img02, img02BottomParsed, -1.05);
-
-        // console.log("lastY : " + lastScrollY);
-
-        // if(img02Bottom <=)
-    
-
-    // Update the last known scroll position
+    parallaxScroll(img01, img01BottomParsed, -0.8);
+    parallaxScroll(img02, img02BottomParsed, -1.05);
 }
 
 // Debounced scroll event listener
@@ -47,7 +30,6 @@ window.addEventListener("scroll", () => {
         isScrolling = true;
         requestAnimationFrame(() => {
             handleScroll();
-            
             isScrolling = false;
         });
     }
