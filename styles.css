@@ -201,16 +201,35 @@ a {
     padding-top: 2rem;
     margin: 0 auto;
     overflow: visible;
-    
-    padding: 4rem 5rem 5rem 5rem;
+    padding: 4rem 5rem 0rem 5rem;
+    position: relative;
+    z-index: 2;
+    overflow: hidden;
 }
 
 .body-01-02, .body-01-03 {
     height: initial;
     position:relative;
-    z-index: 2;
 }
 
+
+.img08{
+    
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    /* transform: translate(-50%, 50%); */
+    height: 100vh;
+    width: 100%;
+    
+    background-image: url(/IMG/PNG/optimized/about/guy_looking_no_background.png);
+    background-attachment: fixed;
+    background-size: contain;
+    background-position: 27% 10vh;
+    background-repeat: no-repeat;
+    z-index: -1;
+    filter: opacity(50%) contrast(30%);
+}
 
 .img01, .img06 {
     position: absolute;
@@ -247,12 +266,12 @@ a {
 }
 
 .img01, .img06{
-    filter: opacity(50%) blur(0.5rem) hue-rotate(210deg);
+    filter: opacity(35%) blur(0.5rem) hue-rotate(210deg) ;
 }
 
 
 .img02, .img07{
-    filter: opacity(40%) blur(0.5rem) hue-rotate(210deg);
+    filter: opacity(25%) blur(0.5rem) hue-rotate(210deg) ;
 }
 
 .body-01-01-content {
@@ -266,9 +285,14 @@ a {
     align-items: center;
     user-select: none;
     /* text-shadow: 0rem 0rem 2rem var(--color-04); */
-    z-index: 2;
+    z-index: 3;
     position: relative;
 }
+
+.body-01-01-content h1{
+    z-index: 5;
+}
+
 
 .body-01-02-content,
 .body-01-03-content {
@@ -304,7 +328,7 @@ a {
     width: 100%;
     display: grid;
     grid-template-columns: max-content 1fr;
-    grid-template-rows: repeat(2, min-content);
+    grid-template-rows:min-content;
     row-gap: 4rem;
     column-gap: 4rem;
 }
@@ -351,6 +375,7 @@ a {
     /* background-color: var(--color-03); */
     display: flex;
     flex-direction: column;
+    padding-bottom: 5rem;
 }
 
 .home_contact_form label {
@@ -435,7 +460,6 @@ a {
 
 .img-footer{
     position: absolute;
-    
     bottom: 0;
     left: 0;
     height: 100%;
@@ -771,14 +795,14 @@ a {
 
 @media screen and (max-width: 475px) {
     .body-01-01-content {
-        line-height: 8rem;
-        font-size: 9vw;
+        line-height: 6rem;
+        font-size: 3rem;
     }
 
     .body-01-01,
     .body-01-02,
     .body-01-03 {
-        padding: 4rem 1rem 4rem 1rem;
+        padding: 4rem 2rem 4rem 2rem;
     }
 
     .card-title::before {
@@ -814,7 +838,7 @@ a {
     .card-title-02,
     .card-title-email {
         /* height: 120rem; */
-        font-size: 4rem;
+        /* font-size: 4rem; */
     }
     
     .body-01-02-grid li {
@@ -831,7 +855,7 @@ a {
     .body-01-01-content {
         
         line-height: 6rem;
-        font-size: 10rem;
+        font-size: 3.6rem;
     }
 }
 
@@ -849,10 +873,3 @@ a {
     }
 }
 
-@media screen and (max-width: 325px) {
-    .body-01-01-content {
-        padding: 0 0 0 1rem;
-        color: var(--color-04);
-        line-height: 5rem;
-    }
-}
