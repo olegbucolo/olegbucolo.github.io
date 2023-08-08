@@ -246,8 +246,13 @@ a {
     z-index: 1;
 }
 
-.img01, .img06, .img02, .img07{
-    filter: opacity(30%) blur(0.5rem) hue-rotate(210deg);
+.img01, .img06{
+    filter: opacity(50%) blur(0.5rem) hue-rotate(210deg);
+}
+
+
+.img02, .img07{
+    filter: opacity(40%) blur(0.5rem) hue-rotate(210deg);
 }
 
 .body-01-01-content {
@@ -260,6 +265,9 @@ a {
     justify-content: center;
     align-items: center;
     user-select: none;
+    /* text-shadow: 0rem 0rem 2rem var(--color-04); */
+    z-index: 2;
+    position: relative;
 }
 
 .body-01-02-content,
@@ -323,6 +331,7 @@ a {
     text-align: start;
     padding-bottom: 0.4rem;
     color: var(--color-04);
+    font-weight: 600;
 }
 
 .card-content p {
@@ -762,7 +771,7 @@ a {
 
 @media screen and (max-width: 475px) {
     .body-01-01-content {
-        line-height: 6rem;
+        line-height: 8rem;
         font-size: 9vw;
     }
 
@@ -817,6 +826,12 @@ a {
     .card-title-02::before,
     .card-title-email::before {
         top: 5rem;
+    }
+
+    .body-01-01-content {
+        
+        line-height: 6rem;
+        font-size: 10rem;
     }
 }
 
