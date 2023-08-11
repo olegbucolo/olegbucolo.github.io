@@ -38,6 +38,23 @@ document.addEventListener("DOMContentLoaded", () => {
     toggleLoginRegistration.addEventListener("click", () => {
         isLoginMode = !isLoginMode;
         console.log("the isLoginMode after toggling: " + isLoginMode);
+        window.scrollTo({
+            top: 0,
+            behavior: "auto" // This adds a smooth scrolling effect
+        });
+
+        const elementsToAnimate = [
+            labelName, inputName, labelLastName, inputLastName,
+            labelDate, inputDate, labelEmail, inputEmail,
+            labelPassword1, inputPassword1, labelPassword2, inputPassword2
+        ];
+        elementsToAnimate.forEach(element => {
+            element.style.animation = "none"; // Remove animation
+            element.offsetHeight; // Trigger reflow
+            element.style.animation = null; // Reset animation
+        });
+    
+
         if (isLoginMode) {
             console.log("isLoginMode = true " + isLoginMode);
 
