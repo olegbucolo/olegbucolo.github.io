@@ -19,8 +19,8 @@
                     <a class="nav-link-home current" href="">home</a>
                     <a class="nav-link-work" href="/work.html">work</a>
                     <a class="nav-link-about" href="/about.html">about</a>
-                    <a class="nav-link-logo" href=""></a>
-                    <a class="nav-link-login" href="">login</a>
+                    <a class="nav-link-logo" href="/index.html"></a>
+                    <a class="nav-link-login" href="/login.html">login</a>
                     <a class="nav-link-sandwich" href="">
                         <span></span>
                         <span></span>
@@ -32,36 +32,12 @@
             <div class="body-outer">
                 <!-- the container where the background-image is applied -->
                 <div class="body-outer-01">
-                    <div class="img01"></div>
-                    <div class="img02"></div>
+                    <!-- <div class="img01"></div> -->
+                    <!-- <div class="img02"></div> -->
                     <div class="body-01-01">
                         <div class="body-01-01-content">
                             <h1>
-                                A symphony of
-                                <span style="color: rgb(255, 0, 0)"
-                                    >C</span
-                                ><span style="color: rgb(255, 140, 0)"
-                                    >O</span
-                                ><span style="color: rgb(255, 255, 0)"
-                                    >L</span
-                                ><span style="color: rgb(13, 255, 0)"
-                                    >O</span
-                                ><span style="color: rgb(0, 162, 255)"
-                                    >R</span
-                                ><span style="color: rgb(0, 51, 255)"
-                                    >S</span
-                                >
-                                and
-                                <span
-                                    style="
-                                        font-family: 'Times New Roman', Times,
-                                            serif;
-                                        text-transform: uppercase;
-                                        font-style: italic;
-                                    "
-                                    >emotions</span
-                                >
-                                that dance across the canvas.
+                                A symphony of colors and emotions that dance across the canvas.
                             </h1>
                         </div>
                     </div>
@@ -195,14 +171,16 @@
                     <div class="body-01-03">
                         <div class="body-01-03-content">
                             <h1 class="card-title-email">Email me</h1>
-                            <div class="home_contact_form">
-                                <label for="home_contact_name">Name</label>
+                            
+                            <form id="form_login_registration" action="submit" class="home_contact_form">
+                                <label id="home_contact_name_label" for="home_contact_name">Name</label>
                                 <input
                                     id="home_contact_name"
                                     type="text"
-                                    placeholder="John Snow"
+                                    placeholder="John Johnson"
                                 />
-                                <label for="home_contact_email">Email</label>
+                               
+                                <label id="home_contact_email_label" for="home_contact_email">Email</label>
                                 <input
                                     id="home_contact_email"
                                     type="email"
@@ -218,8 +196,8 @@
                                     rows="10"
                                     placeholder="Hello, my name is John, I'd like to know about..."
                                 ></textarea>
-                                <input type="submit" value="Send Message">
-                            </div>
+                                <input id="home_contact_send_message" type="submit" value="Send Message">
+                            </form>
                         </div>
                     </div>
                 </div>
