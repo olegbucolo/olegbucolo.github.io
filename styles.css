@@ -61,6 +61,8 @@ a {
     /* --color-04: #536BA4; */
 
     --color-05-green: #76b041;
+
+    --language-svg-height: 6rem;
 }
 
 /* TODO: THEMES */
@@ -112,7 +114,7 @@ a {
 
 .head-outer a:not(.nav-link-logo):not(.nav-link-sandwich):not(.current) {
     color: var(--color-02);
-    font-size: 2.2rem;
+    font-size: 2rem;
     font-weight: 400;
     text-transform: uppercase;
     position: relative;
@@ -168,6 +170,74 @@ a {
     line-height: 6rem;
 }
 
+#language-form{
+    position: fixed;
+    right: 2.5rem;
+    bottom: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+    border-radius: 3rem;
+
+}
+
+.language-it, .language-fr, .language-en{
+    width: initial;
+    box-shadow: initial;
+    height: initial;
+    cursor: pointer;
+    
+}
+
+.language-it, .language-en, .language-fr{
+    height: 6rem;
+    width: 6rem;
+    border-radius: 6rem;
+    padding: 0;
+    box-sizing: border-box;
+    margin-top: 2.5rem;
+    user-select: none;
+}
+
+.language-it{
+    display: none;
+    color: transparent;
+    background-image: url(/IMG/SVG/flags/italy-flag.svg);
+    z-index: 10;
+    border: none;
+    outline: none;
+    background-color: transparent;
+
+}
+
+.language-en{
+    display: none;
+    color: transparent;
+    background-image: url(/IMG/SVG/flags/uk-flag.svg);
+    background-size: 103%;
+    z-index: 2;
+}
+
+.language-fr{
+    display: none;
+    color: transparent;
+    background-image: url(/IMG/SVG/flags/france-flag.svg);
+    background-size: cover;
+    z-index: 1;
+}
+
+.language-selected{
+    display: block !important;
+    margin: 0;
+}
+
+.visible{
+    margin-top: 2.5rem;
+    display: block;
+}
+
 /* BODY ******************************************************************************************************************** */
 
 .body-outer {
@@ -182,6 +252,7 @@ a {
     position: relative;
     width: 100%;
     height: 100%;
+   
     background-position: center top;
     background-size: 100%;
     background-repeat: no-repeat;
@@ -194,7 +265,7 @@ a {
         ),
         url(/IMG/PNG/optimized/b-background-01.jpg);
     box-sizing: border-box;
-    /* overflow: hidden; */
+    
 }
 
 .body-01-01,
@@ -218,7 +289,12 @@ a {
     position: relative;
 }
 
-.img08 {
+.body-login-outer-01 .body-01-01 {
+    padding-top: 15rem;
+    height: initial;
+}
+
+/* .img08 {
     position: absolute;
     bottom: 0;
     left: 0;
@@ -247,7 +323,6 @@ a {
     background-size: 100%;
     background-position: center;
     pointer-events: none;
-    /* overflow: hidden; */
     z-index: 1;
 }
 
@@ -275,10 +350,7 @@ a {
     bottom: 3%;
 }
 
-.body-login-outer-01 .body-01-01 {
-    padding-top: 15rem;
-    height: initial;
-}
+
 
 .img02,
 .img07 {
@@ -292,7 +364,6 @@ a {
     background-size: 100%;
     background-position: center;
     pointer-events: none;
-    /* overflow: hidden; */
     z-index: 1;
 }
 
@@ -304,7 +375,7 @@ a {
 .img02,
 .img07 {
     filter: opacity(25%) blur(0.5rem) hue-rotate(210deg);
-}
+} */
 
 .body-01-01-content {
     color: var(--color-04);
@@ -316,7 +387,6 @@ a {
     justify-content: center;
     align-items: center;
     user-select: none;
-    /* text-shadow: 0rem 0rem 2rem var(--color-04); */
     z-index: 3;
     position: relative;
 }
@@ -566,7 +636,7 @@ textarea {
 .foot-outer-150 .address,
 .foot-outer-150 .legal {
     width: 100%;
-    color: var(--color-01);
+    color: var(--color-03);
     font-size: 1.8rem;
     display: flex;
     justify-content: center;
@@ -592,7 +662,7 @@ textarea {
     content: "";
     width: 100%;
     height: 0.1rem;
-    background-color: var(--color-01);
+    background-color: var(--color-02);
     bottom: 0;
 }
 
@@ -609,7 +679,7 @@ textarea {
 }
 
 .social svg {
-    fill: var(--color-01);
+    fill: var(--color-02);
     height: 3rem;
     width: 3rem;
     z-index: 10;
@@ -622,7 +692,7 @@ textarea {
     bottom: 50%;
     height: 0.1rem;
     width: 5rem;
-    background-color: var(--color-01);
+    background-color: var(--color-03);
 }
 
 .social a:nth-child(2)::before {
@@ -632,7 +702,7 @@ textarea {
     bottom: 0;
     height: 100%;
     width: 0.1rem;
-    background-color: var(--color-01);
+    background-color: var(--color-03);
 }
 
 .social a:nth-child(3)::before {
@@ -642,7 +712,7 @@ textarea {
     bottom: 0;
     height: 100%;
     width: 0.1rem;
-    background-color: var(--color-01);
+    background-color: var(--color-03);
 }
 
 .social a:nth-child(4)::before {
@@ -652,7 +722,7 @@ textarea {
     bottom: 0;
     height: 100%;
     width: 0.1rem;
-    background-color: var(--color-01);
+    background-color: var(--color-03);
 }
 
 .social a:nth-child(4)::after {
@@ -662,7 +732,7 @@ textarea {
     bottom: 50%;
     height: 0.1rem;
     width: 5rem;
-    background-color: var(--color-01);
+    background-color: var(--color-03);
 }
 
 .foot-outer-150 svg:hover,
@@ -671,6 +741,17 @@ textarea {
     fill: white;
 }
 
+
+    /* Animation for fading in */
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+    
 @media screen and (max-width: 1050px) {
 }
 
@@ -690,19 +771,17 @@ textarea {
         transition: height 0.2s ease-in-out;
     }
 
-    .head-outer.pressed header {
-        grid-template-rows: 6rem 10rem 6rem 6rem 6rem 6rem;
+
+    .head-outer.pressed a:not(.nav-link-logo):not(.nav-link-sandwich):not(.current){
+        font-size: 3rem;
     }
 
-    /* Animation for fading in */
-    @keyframes fadeIn {
-        from {
-            opacity: 0;
-        }
-        to {
-            opacity: 1;
-        }
+
+
+    .head-outer.pressed header {
+        grid-template-rows: 10rem 15rem 6rem 6rem 6rem 6rem;
     }
+
 
     /* Apply the fadeIn animation to pressed links */
     .head-outer.pressed a.nav-link-home,
@@ -710,7 +789,7 @@ textarea {
     .head-outer.pressed a.nav-link-about,
     .head-outer.pressed a.nav-link-login {
         display: initial; /* Initially set to display: none */
-        font-size: 2.5rem;
+        font-size: 3.3rem;
         padding: 0.5rem 0;
         opacity: 0; /* Initially set to opacity: 0 */
         animation-name: fadeIn;
@@ -737,8 +816,8 @@ textarea {
     .head-outer.pressed .nav-link-logo {
         grid-column: span 3;
         grid-row: 2;
-        width: 10rem;
-        height: 10rem;
+        width: 15rem;
+        height: 15rem;
         transition: all 0.4s ease-in-out;
     }
 

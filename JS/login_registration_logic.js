@@ -39,8 +39,7 @@ document.addEventListener("DOMContentLoaded", () => {
         isLoginMode = !isLoginMode;
         console.log("the isLoginMode after toggling: " + isLoginMode);
         window.scrollTo({
-            top: 0,
-            behavior: "auto" // This adds a smooth scrolling effect
+            top: 0
         });
 
         const elementsToAnimate = [
@@ -48,15 +47,16 @@ document.addEventListener("DOMContentLoaded", () => {
             labelDate, inputDate, labelEmail, inputEmail,
             labelPassword1, inputPassword1, labelPassword2, inputPassword2
         ];
+        
         elementsToAnimate.forEach(element => {
             element.style.animation = "none"; // Remove animation
             element.offsetHeight; // Trigger reflow
+            console.log('the offsetHeight: ' + element.offsetHeight);
             element.style.animation = null; // Reset animation
         });
     
 
         if (isLoginMode) {
-            console.log("isLoginMode = true " + isLoginMode);
 
             // showing 'login' inthe innerHTML of the form title
             loginRegistrationFormTitle.innerHTML = "Login!";
@@ -79,7 +79,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
         } else {
-            console.log("isLoginMode = false " + isLoginMode);
 
             // showing 'registration' in the innerHTML of the form title
             loginRegistrationFormTitle.innerHTML = "Registration!";
