@@ -10,17 +10,17 @@
             rel="stylesheet"
         />
         <title>HOME</title>
-        <link rel="stylesheet" href="/styles.css" />
+        <link rel="stylesheet" href="/oleg_official/CSS/styles.css" />
     </head>
     <body>
         <div class="body-container">
             <div class="head-outer hidden">
                 <header>
                     <a class="nav-link-home current" href="">home</a>
-                    <a class="nav-link-work" href="/work.html">work</a>
-                    <a class="nav-link-about" href="/about.html">about</a>
-                    <a class="nav-link-logo" href="/index.html"></a>
-                    <a class="nav-link-login" href="/login.html">login </a>
+                    <a class="nav-link-work" href="/oleg_official/HTML/work.html">work</a>
+                    <a class="nav-link-about" href="/oleg_official/HTML/about.html">about</a>
+                    <a class="nav-link-logo" href="/oleg_official/HTML/index.html"></a>
+                    <a class="nav-link-login" href="/oleg_official/HTML/login.html">login </a>
                     <a class="nav-link-sandwich" href="">
                         <span></span>
                         <span></span>
@@ -290,15 +290,15 @@
                     </div>
                 </div>
             </div>
-            <form id="language-form" >
-                <input class="language-en language-selected"  name="country" value="en"/>
-                <input class="language-fr"  name="country" value="fr"/>
-                <input class="language-it"  name="country" value="it"/>
+            <form id="language-form" action="/index" method="get">
+                <input class="language-it language-selected" type="submit" name="country" value="it"/>
+                <input class="language-fr"  name="country" type="submit" value="fr"/>
+                <input class="language-en"  name="country" type="submit" value="en"/>
                 <input type="hidden" name="section" value="home" />
             </form>
 
         </div>
-        <script src="/JS/header_sandwich.js"></script>
-        <script src="/JS/language_logic.js"></script>
+        <script src="/oleg_official/JS/header_sandwich.js"></script>
+        <script src="/oleg_official/JS/language_logic.js"></script>
     </body>
 </html>

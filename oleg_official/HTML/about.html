@@ -10,17 +10,17 @@
             rel="stylesheet"
         />
         <title>HOME</title>
-        <link rel="stylesheet" href="/styles.css" />
+        <link rel="stylesheet" href="/oleg_official/CSS/styles.css" />
     </head>
     <body>
         <div class="body-container">
             <div class="head-outer hidden">
                 <header>
-                    <a class="nav-link-home" href="/index.html">home</a>
-                    <a class="nav-link-work" href="/work.html">work</a>
-                    <a class="nav-link-about" href="/about.html">about</a>
-                    <a class="nav-link-logo" href="/index.html"></a>
-                    <a class="nav-link-login current" href="#">login</a>
+                    <a class="nav-link-home" href="/oleg_official/HTML/index.html">home</a>
+                    <a class="nav-link-work" href="/oleg_official/HTML/work.html">work</a>
+                    <a class="nav-link-about current" href="">about</a>
+                    <a class="nav-link-logo" href="/oleg_official/HTML/index.html"></a>
+                    <a class="nav-link-login" href="/oleg_official/HTML/login.html">login</a>
                     <a class="nav-link-sandwich" href="">
                         <span></span>
                         <span></span>
@@ -28,51 +28,96 @@
                     </a>
                 </header>
             </div>
+            <!-- the whole body container -->
             <div class="body-outer">
-                <div class="body-login-outer-01">
+                <!-- the container where the background-image is applied -->
+                <div class="body-about-outer-01">
+                    <!-- <div class="img01"></div> -->
+                    <!-- <div class="img02"></div> -->
                     <div class="body-01-01">
-                        <h1 class="card-title-email">Login</h1>
+                        <!-- <div class="img08"></div> -->
+                        <div class="body-01-01-content">
+                            <h1>Grateful for past,<br />excited for the future.
+                            </h1>
+                        </div>
+                    </div>
+                    <div class="body-01-02">
+                        <div class="body-01-02-content">
+                            <ul class="body-01-02-grid">
+                                <h1 class="card-title-01">Who are we?</h1>
 
-                        <form id="form_login_registration" action="submit" class="home_contact_form">
-                            <label id="home_contact_name_label" for="home_contact_name">Name</label>
-                            <input
-                                id="home_contact_name"
-                                type="text"
-                                placeholder="John"
-                            />
-                            <label id="home_contact_last_name_label" for="home_contact_last_name"
-                                >Last Name</label
-                            >
-                            <input
-                                id="home_contact_last_name"
-                                type="text"
-                                placeholder="Josh"
-                            />
-                            <label id="home_contact_date_label" for="home_contact_date">Date of Birth</label>
-                            <input id="home_contact_date" type="date" />
-                            <label id="home_contact_email_label" for="home_contact_email">Email</label>
-                            <input
-                                id="home_contact_email"
-                                type="email"
-                                placeholder="email.example@gmail.com"
-                            />
-                            <label id="home_contact_password1_label" for="home_contact_password1">Password</label>
-                            <input
-                                id="home_contact_password1"
-                                type="password"
-                                placeholder="***********"
-                            />
-                            <label id="home_contact_password2_label" for="home_contact_password2">Repeat Password</label>
-                            <input
-                                id="home_contact_password2"
-                                type="password"
-                                placeholder="***********"
-                            />
+                                <li>
+                                    <div class="card-content">
+                                        <h1>1. Tailored to Your Needs:</h1>
+                                        <p>
+                                            Our websites are designed to
+                                            perfectly match the tone and purpose
+                                            of your event. We always make sure
+                                            that your website reflects the
+                                            essence of the occasion.
+                                        </p>
+                                    </div>
+                                    <div class="card-content">
+                                        <h1>2. Simplicity Matters:</h1>
+                                        <p>
+                                            We understand that sometimes less is
+                                            more. Our design philosophy revolves
+                                            around simplicity. No unnecessary
+                                            clutter, just a clean and engaging
+                                            interface.
+                                        </p>
+                                    </div>
+                                    <div class="card-content">
+                                        <h1>3. Quick Turnaround:</h1>
+                                        <p>
+                                            With our streamlined design process,
+                                            we can bring your website to life
+                                            swiftly, so you have ample time to
+                                            focus on other aspects of your event
+                                            planning.
+                                        </p>
+                                    </div>
+                                    <div class="card-content">
+                                        <h1>4. Responsive Design:</h1>
+                                        <p>
+                                            In today's digital age, people
+                                            access websites from various
+                                            devices. Our websites are
+                                            responsive, meaning they look and
+                                            function flawlessly on desktops,
+                                            laptops, tablets, and smartphones.
+                                        </p>
+                                    </div>
+                                    <div class="card-content">
+                                        <h1>5. User-Focused:</h1>
+                                        <p>
+                                            We prioritize your visitors'
+                                            experience. Our intuitive navigation
+                                            and clear layout ensure that anyone
+                                            visiting your event website can
+                                            quickly find the information they
+                                            need.
+                                        </p>
+                                    </div>
+                                    <div class="card-content">
+                                        <h1>6. Affordable Excellence:</h1>
+                                        <p>
+                                            High-quality doesn't have to come
+                                            with a high price tag. We offer
+                                            competitive pricing to make
+                                            professional website design
+                                            accessible.
+                                        </p>
+                                    </div>
+                                </li>
 
-                            <input id="home_contact_form_submit" type="submit" value="Login" />
-                            <input id="home_contact_form_toggle" type="button" value="Register here">
-                        </form>
-                        
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="body-01-03">
+                        <div class="body-01-03-content">
+
+                        </div>
                     </div>
                 </div>
             </div>
@@ -147,15 +192,14 @@
                     </div>
                 </div>
             </div>
-            <form id="language-form" >
+            <form id="language-form" action="/about" method="get">
                 <input class="language-en language-selected"  name="country" value="en"/>
                 <input class="language-fr"  name="country" value="fr"/>
                 <input class="language-it"  name="country" value="it"/>
                 <input type="hidden" name="section" value="home" />
             </form>
         </div>
-        <script src="/JS/header_sandwich.js"></script>
-        <script src="/JS/login_registration_logic.js"></script>
-        <script src="/JS/language_logic.js"></script>
+        <script src="/oleg_official/JS/header_sandwich.js"></script>
+        <script src="/oleg_official/JS/language_logic.js"></script>
     </body>
 </html>

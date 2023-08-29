@@ -58,6 +58,7 @@ a {
     --color-02: #7092c1;
     --color-03: #568bc1;
     --color-04: #1e152a;
+    
     /* --color-04: #536BA4; */
 
     --color-05-green: #76b041;
@@ -89,10 +90,6 @@ a {
     padding: 0 1rem;
     height: 6rem;
     background-color: var(--color-04);
-    /* background-image: url(/IMG/PNG/optimized/nav-01.jpg); */
-    background-position: center bottom;
-    background-repeat: no-repeat;
-    background-size: 140%;
     transition: height 0.2s ease-in-out;
     z-index: 3;
 }
@@ -162,7 +159,7 @@ a {
     background-position: center center;
     background-size: 150%;
     background-repeat: no-repeat;
-    background-image: url(/IMG/PNG/optimized/oleg_logo-removebg.png);
+    background-image: url(/Oleg_official/IMG/PNG/optimized/oleg_logo-removebg.png);
     transition: all 0.2s ease-in-out;
 }
 
@@ -204,7 +201,7 @@ a {
 .language-it{
     display: none;
     color: transparent;
-    background-image: url(/IMG/SVG/flags/italy-flag.svg);
+    background-image: url(/oleg_official/IMG/SVG/flags/italy-flag.svg);
     z-index: 10;
     border: none;
     outline: none;
@@ -215,7 +212,7 @@ a {
 .language-en{
     display: none;
     color: transparent;
-    background-image: url(/IMG/SVG/flags/uk-flag.svg);
+    background-image: url(/oleg_official/IMG/SVG/flags/uk-flag.svg);
     background-size: 103%;
     z-index: 2;
 }
@@ -223,7 +220,7 @@ a {
 .language-fr{
     display: none;
     color: transparent;
-    background-image: url(/IMG/SVG/flags/france-flag.svg);
+    background-image: url(/oleg_official/IMG/SVG/flags/france-flag.svg);
     background-size: cover;
     z-index: 1;
 }
@@ -263,7 +260,7 @@ a {
             rgba(255, 255, 255, 0.2) 92%,
             rgba(255, 255, 255, 0) 100%
         ),
-        url(/IMG/PNG/optimized/b-background-01.jpg);
+        url(/oleg_official/IMG/PNG/optimized/b-background-01.jpg);
     box-sizing: border-box;
     
 }
@@ -293,89 +290,6 @@ a {
     padding-top: 15rem;
     height: initial;
 }
-
-/* .img08 {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-
-    height: 100vh;
-    width: 100%;
-
-    background-image: url(/IMG/PNG/optimized/about/guy_looking_no_background.png);
-    background-attachment: fixed;
-    background-size: contain;
-    background-position: 27% 30vh;
-    background-repeat: no-repeat;
-    z-index: -1;
-    filter: opacity(50%) contrast(30%);
-}
-
-.img01,
-.img06 {
-    position: absolute;
-    bottom: 63%;
-    left: 0;
-    height: 120rem;
-    width: 50%;
-    background-image: url(/IMG/PNG/optimized/home/img01-large.png);
-    background-repeat: no-repeat;
-    background-size: 100%;
-    background-position: center;
-    pointer-events: none;
-    z-index: 1;
-}
-
-.body-outer-01 .img01 {
-    bottom: 43%;
-}
-
-.body-outer-01 .img02 {
-    bottom: 63%;
-}
-
-.body-about-outer-01 .img01 {
-    bottom: 23%;
-}
-
-.body-about-outer-01 .img02 {
-    bottom: 43%;
-}
-
-.body-login-outer-01 .img06 {
-    bottom: -23%;
-}
-
-.body-login-outer-01 .img07 {
-    bottom: 3%;
-}
-
-
-
-.img02,
-.img07 {
-    position: absolute;
-    bottom: 70%;
-    right: 0;
-    height: 120rem;
-    width: 50%;
-    background-image: url(/IMG/PNG/optimized/home/img02-large.png);
-    background-repeat: no-repeat;
-    background-size: 100%;
-    background-position: center;
-    pointer-events: none;
-    z-index: 1;
-}
-
-.img01,
-.img06 {
-    filter: opacity(35%) blur(0.5rem) hue-rotate(210deg);
-}
-
-.img02,
-.img07 {
-    filter: opacity(25%) blur(0.5rem) hue-rotate(210deg);
-} */
 
 .body-01-01-content {
     color: var(--color-04);
@@ -458,27 +372,9 @@ a {
     right: 0;
     height: 30rem;
     margin: 2.5rem 0;
-
     border-radius: 0.5rem;
-    /* background-color: #0e2954b0; */
     box-shadow: 1rem 1rem 1rem -0.8rem var(--color-04),
         -1rem -1rem 1rem -0.8rem white;
-}
-
-.card-content:nth-child(1) .work-card-img {
-    /* background-image: url(/IMG/PNG/optimized/frame.png); */
-    /* background-size: 100%; */
-    /* background-repeat: no-repeat; */
-}
-
-.card-content:nth-child(2) .work-card-img {
-    /* background-image: url(/IMG/PNG/optimized/b-background-01.jpg); */
-    /* background-size: 100%; */
-}
-
-.card-content:nth-child(3) .work-card-img {
-    /* background-image: url(/IMG/PNG/optimized/Il\ mio\ progetto.png); */
-    /* background-size: 100%; */
 }
 
 .work-card-link {
@@ -487,7 +383,6 @@ a {
     border-radius: 1rem;
     box-shadow: 1rem 1rem 1rem -0.8rem var(--color-04),
         -1rem -1rem 1rem -0.8rem white;
-    /* display: block; */
     background-color: rgba(0, 128, 0, 0.7);
     color: var(--color-04);
     font-size: 2.2rem;
@@ -517,11 +412,9 @@ a {
 /* fucking form motherfucker */
 
 #form_login_registration {
-    /* height: 50rem; */
     width: 100%;
     max-width: 50rem;
     margin: 0 auto;
-    /* background-color: var(--color-03); */
     display: flex;
     flex-direction: column;
     padding-bottom: 5rem;
