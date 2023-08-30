@@ -8,6 +8,15 @@ html * {
     box-sizing: border-box;
 }
 
+h1 {
+    font-family: "Cinzel", serif;
+}
+
+p {
+    font-family: "Raleway", sans-serif;
+    word-spacing: 0.4rem;
+}
+
 :root {
     --color01: #f6f6f6;
     --color02: #d9cab3;
@@ -15,18 +24,22 @@ html * {
     --color04: #212121;
 
     /* header font sizes */
-    --header-font-01: 2.4rem;
+    --header-font-01: 2rem;
     --header-font-02: 2rem;
 
     /* margin & padding */
-    --section-margin-top: 5rem;
+    --section-padding-top: 5rem;
+    --space-h101: 2.5rem;
 
+    --font-size-title01: 3rem;
+    --font-size-parag01: 2rem;
 }
 
 .body-container {
     width: 100%;
-    height: 400rem;
+    height: max-content;
     background-color: var(--color01);
+    position: relative;
 }
 
 .head-outer {
@@ -78,7 +91,7 @@ header a:not(:first-child):before {
     height: 0.2rem;
     width: 0;
     background-color: var(--color01);
-    right: 0rem;
+    left: 0rem;
     transition: width 0.2s ease-in-out;
 }
 
@@ -102,26 +115,23 @@ header a:hover::before {
 
 /* BODY START ********************************************************************************************* */
 
-.body-outer{
-    /* background-color: lightgreen; */
-    height: calc(100vh - 70px);
+.body-outer {
     width: 100%;
 }
 
-.sec-01{
+.sec-01 {
     height: 100%;
 }
 
 /* CAROUSEL TODO:  */
-
-.carousel-container{
+.carousel-container {
     width: 100%;
-    height: 100%;
-    overflow: hidden;  
+    height: calc(100vh - 70px);
+    overflow: hidden;
     position: relative;
 }
 
-.carousel{
+.carousel {
     position: absolute;
     left: -1px;
     top: -1px;
@@ -129,34 +139,33 @@ header a:hover::before {
     width: calc(300vw + 6px);
     height: calc(100% + 2px);
     display: flex;
-    transition: transform .5s ease;
+    transition: transform 0.5s ease;
 }
 
-.carousel img{
+.carousel img {
     height: auto;
     width: calc(100vw + 2px);
-    /* background-image: url(/oleg_official/IMG/PNG/optimized/home/img01-small.png); */
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
-    filter: grayscale(75%) brightness(120%); 
+    filter: grayscale(75%) brightness(120%);
     box-sizing: border-box;
     border: none;
 }
 
-.carousel img:nth-child(1){
+.carousel img:nth-child(1) {
     background-image: url(/restaurant_template/IMG/restaurant_01.jpg);
 }
 
-.carousel img:nth-child(2){
+.carousel img:nth-child(2) {
     background-image: url(/restaurant_template/IMG/restaurant_02.jpg);
 }
 
-.carousel img:nth-child(3){
+.carousel img:nth-child(3) {
     background-image: url(/restaurant_template/IMG/restaurant_03.jpg);
 }
 
-.carousel-btns{
+.carousel-btns {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
@@ -167,10 +176,9 @@ header a:hover::before {
     width: 100%;
     max-width: 150rem;
     height: 100%;
-    /* z-index: 3; */
 }
 
-.carousel-btns button{
+.carousel-btns button {
     margin: 5rem 2.5rem;
     height: 4rem;
     width: 10rem;
@@ -178,33 +186,247 @@ header a:hover::before {
     border: none;
     font-size: 2.4rem;
     background-color: var(--color01);
-    opacity: .6;
+    opacity: 0.6;
     color: var(--color04);
     text-transform: uppercase;
-    letter-spacing: .2rem;
-    border-radius: .5rem;
+    letter-spacing: 0.2rem;
 }
 
-.sec-02{
-    height: 100vh;
+.sec-02 {
     width: 100%;
+    background-color: var(--color01);
+}
+
+.sec-02-container {
+    width: 100%;
+    height: min-content;
+    max-width: 150rem;
+    padding: var(--section-padding-top) 0;
+    margin: 0 auto;
+    box-sizing: border-box;
+    overflow: hidden;
+    padding: 1.5rem;
+}
+
+.sec-02-img {
+    
+    width: 50%;
+    float: left;
+    margin-right: 1.25rem;
+}
+
+.sec-02-img img {
+    width: 100%;
+    filter: grayscale(100%);
+    vertical-align: 50%;
+}
+
+.sec-02-text {
+    color: var(--color04);
+}
+
+.sec-02-text h1 {
+    font-size: var(--font-size-title01);
+    padding-bottom: var(--space-h101);
+}
+.sec-02-text p {
+    font-size: var(--font-size-parag01);
+}
+
+/* section 3 */
+
+.sec-03{
+    padding: var(--space-h101);
+    width: 100%;
+    max-width: 150rem;
+    margin: 0 auto;
+    /* background-color: var(--color02); */
+    
+}
+
+.sec-03 > h1{
+    font-size: 4rem;
+    text-align: center;
+    padding-bottom: var(--space-h101);
+    position: relative;
+}
+
+.sec-03 > h1::before{
+    position: absolute;
+    content: "";
+    left: 0;
+    bottom: 2rem;
+    width: 100%;
+    height: .1rem;
     background-color: var(--color04);
 }
 
-.sec-02-container{
+.card{
+    display: flex;
+    margin-bottom: 5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2.5rem;
     position: relative;
-    display: inline-block;
 }
 
-.sec-02-container img{
-    /* background-image: url(/restaurant_template/IMG/restaurant_02.jpg); */
-    background-size: cover;
-    background-repeat: no-repeat;
-    width: 25rem;
+.card:nth-child(4){
+    margin-bottom: 0;
+}
+
+.card:not(:last-child)::before{
+    position: absolute;
+    content: "";
+    left: 0;
+    bottom: -2.5rem; 
+    width: 100%;
+    height: .1rem;
+    background-color: var(--color04);
+}
+
+.card > div{
+    overflow: hidden;
+    width: calc(50% - 4rem);
     height: 25rem;
 }
 
+.card:nth-child(3) > div:first-child{
+    order: 2;
+}
+
+.card .card-01-text, .card .card-02-text, .card .card-03-text{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.sec-03 h1{
+    font-size: var(--font-size-title01);
+}
+
+.sec-03 p{
+    font-size: var(--font-size-parag01);
+    padding-bottom: var(--space-h101);
+    overflow: hidden;
+}
+
+.sec-03-img{
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.sec-03-img img{
+    height: auto;
+    width: 100%;
+}
+
+.sec-03-img::before{
+    position: absolute;
+    content: "";
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    opacity: .2;
+    background-color: var(--color04);
+    transition: all .4s ease-in-out;
+
+}
+
+.sec-03-img:hover::before{
+    opacity: 0;
+    transition: all .4s ease-in-out;
+}
+
+.card a{
+    height: min-content;
+    background-color: var(--color04);
+    padding: 1rem 2rem;
+    font-size: 1.4rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: var(--color02);
+    width: min-content;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+
 /* BODY END ********************************************************************************************* */
+
+/* FOOTER START ********************************************************************************************* */
+
+.foot-outer {
+    background-color: var(--color04);
+    width: 100%;
+    max-width: 150rem;
+    padding: 2.5rem 2.5rem 0 2.5rem;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+}
+
+.foot-top {
+    height: 80%;
+    display: flex;
+}
+
+.foot-top h1 {
+    font-size: var(--font-size-title01);
+    padding-bottom: calc(var(--space-h101) * 2);
+    position: relative;
+}
+
+.foot-top h1::before {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 4rem;
+    content: "";
+    width: 18rem;
+    height: 0.1rem;
+    background-color: var(--color02);
+}
+
+.foot-top h1{
+    color: var(--color02);
+    text-align: center;
+}
+
+.foot-top p, .foot-bottom a {
+    color: var(--color01);
+    text-align: center;
+    font-size: calc(var(--font-size-parag01) - 0.4rem);
+    margin-bottom: var(--space-h101);
+    text-decoration: none;
+}
+
+.foot-top > div {
+    height: 100%;
+    width: 100%;
+}
+
+.foot-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 150rem;
+    margin: 0 auto;
+    height: 20%;
+    width: 100%;
+    border-top: 1px solid var(--color02);
+}
+
+.foot-bottom a{
+    height: min-content;
+    margin: 0;
+    margin: 2.5rem;
+}
+
+
+/* FOOTER END ********************************************************************************************* */
 
 /* CAROUSEL START ********************************************************************************************* */
 
@@ -237,11 +459,10 @@ header a:hover::before {
         height: 0.3rem;
         margin: 1rem 0;
         background-color: var(--color02);
-        border-radius: 1rem;
         transition: all 0.4s ease;
     }
 
-    .zero-height{
+    .zero-height {
         display: none;
     }
 
@@ -279,7 +500,6 @@ header a:hover::before {
     .header-logo {
         width: 5rem;
         height: 5rem;
-        line-height: 5rem;
         align-self: flex-start;
     }
 
@@ -320,4 +540,55 @@ header a:hover::before {
     .head-outer-sticky.sand-100 a:nth-child(6) {
         top: 43rem;
     }
+}
+
+@media screen and (max-width: 700px) {
+    .sec-02-img {
+        width: 100%;
+        height: auto;
+        float: left;
+        margin-right: 1.25rem;
+        margin-bottom: var(--space-h101);
+        /* margin-bottom: 2.5rem; */
+    }
+
+    .sec-02-container {
+        padding: 1.5rem;
+    }
+
+    .sec-02-text h1 {
+        text-align: center;
+    }
+
+    .foot-top {
+        flex-direction: column;
+    }
+
+    .foot-top > div {
+        padding-bottom: var(--space-h101);
+    }
+
+    .card{
+        flex-direction: column;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 2.5rem;
+        position: relative;
+    }
+
+    .card:nth-child(3) > div:first-child{
+        order: 0;
+    }
+ 
+    .card > div{
+        width: 100%;
+    }
+
+    .sec-03{
+        padding: 1.25rem;
+    }
+}
+
+@media screen and (max-width: 250px){
+
 }

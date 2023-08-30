@@ -1,7 +1,6 @@
 const carousel = document.querySelector('.carousel');
 const images = document.querySelectorAll('.carousel img');
 
-console.log(images.length);
 let currentIndex = 0;
 
 function showImage(index) {
