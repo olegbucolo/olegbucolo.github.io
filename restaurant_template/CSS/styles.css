@@ -29,7 +29,10 @@ p {
 
     /* margin & padding */
     --section-padding-top: 5rem;
+    --section-padding-topX2: 10rem;
     --space-h101: 2.5rem;
+
+    --DEFAULT_left-right: 1rem;
 
     --font-size-title01: 3rem;
     --font-size-parag01: 2rem;
@@ -47,6 +50,19 @@ p {
     height: 9rem;
     background-color: var(--color04);
     border-bottom: 1px solid var(--color01);
+    position: relative;
+}
+
+.go-back-to-portfolio{
+    position: fixed;
+    height: 5rem;
+    width: 5rem;
+    
+    top: 7rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 5;
+    
 }
 
 .head-outer-sticky {
@@ -123,7 +139,8 @@ header a:hover::before {
     height: 100%;
 }
 
-/* CAROUSEL TODO:  */
+/* TODO: TODO: TODO: TODO: TODO: TODO: TODO: TODO: TODO: TODO: */
+
 .carousel-container {
     width: 100%;
     height: calc(100vh - 70px);
@@ -201,11 +218,10 @@ header a:hover::before {
     width: 100%;
     height: min-content;
     max-width: 150rem;
-    padding: var(--section-padding-top) 0;
+    padding: var(--section-padding-topX2) var(--DEFAULT_left-right);
     margin: 0 auto;
     box-sizing: border-box;
     overflow: hidden;
-    padding: 1.5rem;
 }
 
 .sec-02-img {
@@ -236,62 +252,58 @@ header a:hover::before {
 /* section 3 */
 
 .sec-03{
-    padding: var(--space-h101);
-    width: 100%;
-    max-width: 150rem;
-    margin: 0 auto;
-    /* background-color: var(--color02); */
     
+    width: 100%;
+    background-color: var(--color02);
+    margin-bottom: var(--section-padding-top);
 }
 
-.sec-03 > h1{
+.sec-03-container{
+    margin: 0 auto;
+    width: 100%;
+    max-width: 150rem;
+}
+
+.sec-03-container > h1{
     font-size: 4rem;
     text-align: center;
     padding-bottom: var(--space-h101);
     position: relative;
 }
 
-.sec-03 > h1::before{
-    position: absolute;
-    content: "";
-    left: 0;
-    bottom: 2rem;
-    width: 100%;
-    height: .1rem;
-    background-color: var(--color04);
-}
-
 .card{
     display: flex;
-    margin-bottom: 5rem;
+    padding: var(--section-padding-topX2) 0;
     justify-content: center;
     flex-wrap: wrap;
     gap: 2.5rem;
     position: relative;
 }
 
-.card:nth-child(4){
+.card:nth-child(3){
     margin-bottom: 0;
 }
 
-.card:not(:last-child)::before{
-    position: absolute;
-    content: "";
-    left: 0;
-    bottom: -2.5rem; 
-    width: 100%;
-    height: .1rem;
-    background-color: var(--color04);
+.card:not(:last-child){
+    border-bottom: .1rem solid var(--color04);
 }
 
 .card > div{
     overflow: hidden;
-    width: calc(50% - 4rem);
+    width: calc(50% - 2rem);
     height: 25rem;
 }
 
-.card:nth-child(3) > div:first-child{
-    order: 2;
+.card >div:first-child{
+    height: 25rem;
+}
+
+.card >div:last-child{
+    height: min-content;
+}
+
+.card:nth-child(2) > div:first-child{
+    order: 1;
 }
 
 .card .card-01-text, .card .card-02-text, .card .card-03-text{
@@ -321,24 +333,6 @@ header a:hover::before {
     width: 100%;
 }
 
-.sec-03-img::before{
-    position: absolute;
-    content: "";
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    opacity: .2;
-    background-color: var(--color04);
-    transition: all .4s ease-in-out;
-
-}
-
-.sec-03-img:hover::before{
-    opacity: 0;
-    transition: all .4s ease-in-out;
-}
-
 .card a{
     height: min-content;
     background-color: var(--color04);
@@ -359,13 +353,14 @@ header a:hover::before {
 /* FOOTER START ********************************************************************************************* */
 
 .foot-outer {
-    background-color: var(--color04);
+    /* background-color: var(--color04); */
     width: 100%;
     max-width: 150rem;
     padding: 2.5rem 2.5rem 0 2.5rem;
     display: flex;
     flex-direction: column;
     margin: 0 auto;
+    color: var(--color04)
 }
 
 .foot-top {
@@ -385,18 +380,19 @@ header a:hover::before {
     transform: translateX(-50%);
     bottom: 4rem;
     content: "";
-    width: 18rem;
+    width: 100%;
+    max-width: 25rem;
     height: 0.1rem;
-    background-color: var(--color02);
+    background-color: var(--color04);
 }
 
 .foot-top h1{
-    color: var(--color02);
+    /* color: var(--color02); */
     text-align: center;
 }
 
 .foot-top p, .foot-bottom a {
-    color: var(--color01);
+    /* color: var(--color01); */
     text-align: center;
     font-size: calc(var(--font-size-parag01) - 0.4rem);
     margin-bottom: var(--space-h101);
@@ -416,22 +412,18 @@ header a:hover::before {
     margin: 0 auto;
     height: 20%;
     width: 100%;
-    border-top: 1px solid var(--color02);
+    border-top: 1px solid var(--color04);
 }
 
 .foot-bottom a{
     height: min-content;
     margin: 0;
     margin: 2.5rem;
+    color: var(--color04)
 }
 
 
 /* FOOTER END ********************************************************************************************* */
-
-/* CAROUSEL START ********************************************************************************************* */
-
-/* CAROUSEL END ********************************************************************************************* */
-
 /* ******************* */
 /* ******************* */
 /* ******************* */
@@ -553,7 +545,7 @@ header a:hover::before {
     }
 
     .sec-02-container {
-        padding: 1.5rem;
+        padding: var(--DEFAULT_left-right);
     }
 
     .sec-02-text h1 {
@@ -576,7 +568,7 @@ header a:hover::before {
         position: relative;
     }
 
-    .card:nth-child(3) > div:first-child{
+    .card:nth-child(2) > div:first-child{
         order: 0;
     }
  
@@ -589,6 +581,8 @@ header a:hover::before {
     }
 }
 
-@media screen and (max-width: 250px){
-
+@media screen and (max-width: 300px){
+    .foot-bottom a{
+        margin: 2.5rem 1rem;
+    }
 }

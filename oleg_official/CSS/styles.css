@@ -64,6 +64,13 @@ a {
     --color-05-green: #76b041;
 
     --language-svg-height: 6rem;
+
+    /* RESTORAUNT PALETTE */
+
+    --color11: #f6f6f6;
+    --color12: #d9cab3;
+    --color13: #6d9886;
+    --color14: #212121;
 }
 
 /* TODO: THEMES */
@@ -375,6 +382,16 @@ a {
     border-radius: 0.5rem;
     box-shadow: 1rem 1rem 1rem -0.8rem var(--color-04),
         -1rem -1rem 1rem -0.8rem white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: var(--color14); */
+}
+
+.card-content:nth-child(1) .work-card-img{
+    background-image: url(/oleg_official/IMG/PNG/Elegantee\ -\ Google\ Chrome\ 8_31_2023\ 12_49_34\ AM.png);
+    background-size: cover;
+
 }
 
 .work-card-link {
@@ -394,6 +411,8 @@ a {
     position: relative;
     padding: 0 2.5rem;
 }
+
+
 
 .card-content h1 {
     font-size: 2.2rem;
