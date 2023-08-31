@@ -116,7 +116,7 @@ header a:hover::before {
 }
 
 .header-logo {
-    font-size: 7rem;
+    font-size: 6rem;
     font-style: italic;
     background-color: var(--color03);
     border-radius: 5.5rem;
@@ -273,7 +273,7 @@ header a:hover::before {
 
 .card{
     display: flex;
-    padding: var(--section-padding-topX2) 0;
+    padding: var(--section-padding-top) 0;
     justify-content: center;
     flex-wrap: wrap;
     gap: 2.5rem;
@@ -285,7 +285,7 @@ header a:hover::before {
 }
 
 .card:not(:last-child){
-    border-bottom: .1rem solid var(--color04);
+    /* border-bottom: .1rem solid var(--color04); */
 }
 
 .card > div{
@@ -442,14 +442,14 @@ header a:hover::before {
     .sand-menu {
         display: block;
         cursor: pointer;
-        height: 5rem;
+        height: 3rem;
         align-self: flex-start;
     }
 
     .sand-menu div {
-        width: 5em;
+        width: 4rem;
         height: 0.3rem;
-        margin: 1rem 0;
+        margin: .8rem 0;
         background-color: var(--color02);
         transition: all 0.4s ease;
     }
@@ -464,13 +464,13 @@ header a:hover::before {
     }
 
     .head-outer-sticky.sand-100 .sand-menu div:nth-child(1) {
-        transform: translateY(1.3rem) rotate(45deg);
+        transform: translateY(1.1rem) rotate(45deg);
         transition: all 0.4s ease;
     }
 
     .head-outer-sticky.sand-100 .sand-menu div:nth-child(3) {
         transition: all 0.4s ease;
-        transform: translateY(-1.3rem) rotate(-45deg);
+        transform: translateY(-1.1rem) rotate(-45deg);
     }
 
     .head-outer-sticky.sand-100 {
@@ -479,7 +479,7 @@ header a:hover::before {
     }
 
     header {
-        padding: 1rem 2rem;
+        padding: 1.3rem 2rem;
         justify-content: space-between;
         position: relative;
         align-items: top;
@@ -490,8 +490,8 @@ header a:hover::before {
     }
 
     .header-logo {
-        width: 5rem;
-        height: 5rem;
+        width: 4rem;
+        height: 4rem;
         align-self: flex-start;
     }
 
@@ -545,7 +545,7 @@ header a:hover::before {
     }
 
     .sec-02-container {
-        padding: var(--DEFAULT_left-right);
+        padding: var(--section-padding-top) var(--DEFAULT_left-right);
     }
 
     .sec-02-text h1 {
