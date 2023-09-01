@@ -143,8 +143,10 @@ a {
     right: 0;
 }
 
+
+/* if introducing login, change the 5th child to sixth */
 .head-outer
-    a:hover:not(:nth-child(4)):not(:nth-child(6)):not(.current)::before {
+    a:hover:not(:nth-child(4)):not(:nth-child(5)):not(.current)::before {
     content: "";
     position: absolute;
     bottom: 1.5rem;
@@ -173,7 +175,7 @@ a {
 .head-outer a {
     line-height: 6rem;
 }
-
+/* 
 #language-form{
     position: fixed;
     right: 2.5rem;
@@ -240,7 +242,8 @@ a {
 .visible{
     margin-top: 2.5rem;
     display: block;
-}
+} 
+*/
 
 /* BODY ******************************************************************************************************************** */
 
@@ -555,6 +558,23 @@ textarea {
     align-items: center;
     position: relative;
     text-align: center;
+    cursor: pointer;
+}
+
+/*  */
+
+.language-button{
+    position: absolute;
+    left: 50%;
+    top: 30rem;
+    transform: translateX(-50%);
+    z-index: 10;
+    height: 5rem;
+    width: 10rem;
+}
+
+.language-button:nth-child(2){
+    left: 55%;
 }
 
 .foot-outer-150 .address {
@@ -881,6 +901,10 @@ textarea {
     .img-footer {
         background-size: 1000%;
         background-position: 90% top;
+    }
+
+    .card-title-email, .card-title-01{
+        font-size: 3.8rem;
     }
 }
 
