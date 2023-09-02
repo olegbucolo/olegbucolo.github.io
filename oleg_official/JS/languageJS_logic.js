@@ -76,6 +76,7 @@ const work_h1_01_IT =
 // about h1_01
 const about_h1_01_IT = "Grato per il passato, entusiasta per il futuro";
 
+
 // home h1_02
 const home_h1_02_IT = "Perche' noi?";
 
@@ -83,6 +84,7 @@ const home_h1_02_IT = "Perche' noi?";
 const work_h1_02_IT = "Il nostro processo";
 
 // about h1_02
+const about_h1_02_IT = "Chi sono?";
 
 const home_h1_03_IT = "Inviami un'email"; // fatto
 
@@ -202,6 +204,9 @@ const home_placeholder_email_02_IT =
 // HOME ITALIANO TASTO 'INVIA MESSAGGIO'
 const home_email_button_01_IT = "Invia Messaggio";
 
+// WORK ITALIANO TASTI WORK 
+const work_button_template = "Scoprilo";
+
 // HOME ITALIANO INDIRIZZO
 const home_address_a_01_IT = "San Filippo del Mela 98044, ME, Italia";
 
@@ -229,8 +234,10 @@ if (target_work_h1_01_IT) {
 }
 
 // home h1_02
-const target_home_h1_02_IT = document.querySelector(".card-title-01");
-target_home_h1_02_IT.innerHTML = home_h1_02_IT;
+const target_home_h1_02_IT = document.querySelector(".home_h1_02_IT");
+if(target_home_h1_02_IT){
+    target_home_h1_02_IT.innerHTML = home_h1_02_IT;
+}
 
 // work h1_02
 const target_work_h1_02_IT = document.querySelector(".work_h1_02_IT");
@@ -238,14 +245,22 @@ if(target_work_h1_02_IT){
     target_work_h1_02_IT.innerHTML = work_h1_02_IT;
 }
 
+// home h1_03
 const target_home_h1_03_IT = document.querySelector(".card-title-email");
 if (target_home_h1_03_IT) {
     target_home_h1_03_IT.innerHTML = home_h1_03_IT;
 }
 
+// about h1_01
 const target_about_h1_01_IT = document.querySelector(".about_h1_01_IT");
 if (target_about_h1_01_IT) {
     target_about_h1_01_IT.innerHTML = about_h1_01_IT;
+}
+
+// about h1_02
+const target_about_h1_02_IT = document.querySelector(".about_h1_02_IT");
+if(target_about_h1_02_IT){
+    target_about_h1_02_IT.innerHTML = about_h1_02_IT;
 }
 
 // HOME ITALIANO H2 (INTENDESI TESTI PIU' PICCOLI DELL'H1 USATO PRIMA)
@@ -413,7 +428,22 @@ if(target_work_p_06_IT){
 }
 
 // work p_07
-// const target_work_p_07_0
+const target_work_p_07_IT = document.querySelector(".work_p_07_IT");
+if(target_work_p_07_IT){
+    target_work_p_07_IT.innerHTML = work_p_07_IT;
+}
+
+// work p_08
+const target_work_p_08_IT = document.querySelector(".work_p_08_IT");
+if(target_work_p_08_IT){
+    target_work_p_08_IT.innerHTML = work_p_08_IT;
+}
+
+// work p _09
+const target_work_p_09_IT = document.querySelector(".work_p_09_IT");
+if(target_work_p_09_IT){
+    target_work_p_09_IT.innerHTML = work_p_09_IT;
+}
 
 // placeholder email
 const target_home_placeholder_email_01_IT = document.querySelector(
@@ -438,6 +468,15 @@ const target_home_email_01_IT = document.querySelector(
 );
 if (target_home_email_01_IT) {
     target_home_email_01_IT.innerHTML = home_email_01_IT;
+}
+
+// WORK BUTTON TEMPLATES TODO:
+const target_work_button_template = document.querySelectorAll(".work-card-link");
+if(target_work_button_template){
+    console.log("the target etc is not null")
+    target_work_button_template.forEach((button)=>{
+        button.innerHTML = work_button_template;
+    })
 }
 
 // HOME ITALIANO TASTO 'INVIA MESSAGGIO'
