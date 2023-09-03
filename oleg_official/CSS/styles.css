@@ -4,7 +4,6 @@ html {
     padding: 0;
     font-family: "Nunito", sans-serif;
     font-family: "Raleway", sans-serif;
-    
 }
 
 * {
@@ -44,7 +43,7 @@ a {
     overflow: hidden;
 }
 
-.body-outer{
+.body-outer {
     overflow: hidden;
 }
 
@@ -63,7 +62,7 @@ a {
     --color-02: #7092c1;
     --color-03: #568bc1;
     --color-04: #1e152a;
-    
+
     /* --color-04: #536BA4; */
 
     --color-05-green: #76b041;
@@ -76,6 +75,26 @@ a {
     --color12: #d9cab3;
     --color13: #6d9886;
     --color14: #212121;
+}
+
+html {
+    position: relative;
+}
+
+::-webkit-scrollbar {
+    width: 1.2rem;
+    background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 1rem;
+    background-color: var(
+        --color-02
+    ); /* Replace with your desired color code */
+}
+
+::-webkit-scrollbar-track {
+    background-color: var(--color-04);
 }
 
 /* TODO: THEMES */
@@ -132,7 +151,7 @@ a {
 
 .head-outer .current {
     color: var(--color-03);
-    font-size: 2.2rem;
+    font-size: 2.1rem;
     font-weight: 400;
     text-transform: uppercase;
     position: relative;
@@ -148,10 +167,9 @@ a {
     right: 0;
 }
 
-
 /* if introducing login, change the 5th child to sixth */
 .head-outer
-    a:hover:not(:nth-child(4)):not(:nth-child(5)):not(.current)::before {
+    a:hover:not(:nth-child(4)):not(:nth-child(6)):not(.current)::before {
     content: "";
     position: absolute;
     bottom: 1.5rem;
@@ -264,7 +282,7 @@ a {
     position: relative;
     width: 100%;
     height: 100%;
-   
+
     background-position: center top;
     background-size: 100%;
     background-repeat: no-repeat;
@@ -277,7 +295,6 @@ a {
         ),
         url(/oleg_official/IMG/PNG/optimized/b-background-01.jpg);
     box-sizing: border-box;
-    
 }
 
 .body-01-01,
@@ -335,7 +352,7 @@ a {
     text-align: center;
 }
 
-.body-01-02-floating-text{
+.body-01-02-floating-text {
     /* width: 100%; */
     /* background-color: green; */
     position: absolute;
@@ -343,10 +360,9 @@ a {
     right: 0;
     overflow: hidden;
     white-space: nowrap;
-    
 }
 
-.body-01-02-floating-text ul{
+.body-01-02-floating-text ul {
     /* display: flex; */
     justify-content: space-between;
     font-size: 2.4rem;
@@ -359,10 +375,10 @@ a {
     padding-right: 4.5rem;
 }
 
-.body-01-02-floating-text ul li{
+.body-01-02-floating-text ul li {
     position: relative;
     width: max-content;
-    animation: float 2s ease-in-out infinite ;
+    animation: float 2s ease-in-out infinite;
 }
 
 @keyframes loop {
@@ -374,22 +390,20 @@ a {
     }
 }
 
-.body-01-02-floating-text ul li::before{
+.body-01-02-floating-text ul li::before {
     position: absolute;
     content: "";
     left: -1.25rem;
-    bottom: .8rem;
-    height: .6rem;
-    width: .6rem;
-    border-radius: .4rem;
+    bottom: 0.8rem;
+    height: 0.6rem;
+    width: 0.6rem;
+    border-radius: 0.4rem;
     background-color: var(--color-04);
-    
 }
 
-.body-01-02-floating-text ul li:nth-child(1)::before{
+.body-01-02-floating-text ul li:nth-child(1)::before {
     z-index: 100;
 }
-
 
 .card-title-01,
 .card-title-02,
@@ -453,10 +467,9 @@ a {
     /* background-color: var(--color14); */
 }
 
-.card-content:nth-child(1) .work-card-img{
+.card-content:nth-child(1) .work-card-img {
     background-image: url(/oleg_official/IMG/PNG/Elegantee\ -\ Google\ Chrome\ 8_31_2023\ 12_49_34\ AM.png);
     background-size: cover;
-
 }
 
 .work-card-link {
@@ -476,8 +489,6 @@ a {
     position: relative;
     padding: 0 2.5rem;
 }
-
-
 
 .card-content h1 {
     font-size: 2.2rem;
@@ -503,7 +514,6 @@ a {
     flex-direction: column;
     padding-bottom: 5rem;
 }
-
 
 #form_login_registration label {
     padding-top: 5rem;
@@ -561,16 +571,15 @@ textarea {
 }
 
 /* default labels+inputs for the login */
-#home_contact_name_label,
-#home_contact_name,
-#home_contact_last_name_label,
-#home_contact_last_name,
+
 #home_contact_date_label,
 #home_contact_date,
 #home_contact_password2_label,
 #home_contact_password2 {
     display: none;
 }
+
+
 
 /* footer ******************************************************************************************************************** */
 
@@ -623,21 +632,46 @@ textarea {
     cursor: pointer;
 }
 
-/*  */
+/* language stuff */
 
-.language-button{
-    position: absolute;
-    left: 50%;
-    top: 30rem;
-    transform: translateX(-50%);
-    z-index: 10;
-    height: 5rem;
-    width: 10rem;
+.language-container {
+    align-self: center;
+    width: 3rem;
+    height: 3rem;
+    background-image: url(/oleg_official/IMG/SVG/flags/uk-flag.svg);
+    background-size: cover;
+    border-radius: 2.5rem;
+    cursor: pointer;
+    margin-right: 2.5rem;
 }
 
-.language-button:nth-child(2){
-    left: 55%;
+.language-button {
+    display: none;
+    margin-top: 5rem;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 2.5rem;
+    border: none;
+    user-select: none;
 }
+
+.language-container.langs-visible .language-button {
+    display: block;
+}
+
+.language-button-it {
+    background-image: url(/oleg_official/IMG/SVG/flags/italy-flag.svg);
+    background-size: cover;
+    margin-top: 6rem;
+}
+
+.language-button-en {
+    background-image: url(/oleg_official/IMG/SVG/flags/uk-flag.svg);
+    background-size: cover;
+    margin-top: 3rem;
+}
+
+
 
 .foot-outer-150 .address {
     height: 25%;
@@ -736,17 +770,16 @@ textarea {
     fill: white;
 }
 
-
-    /* Animation for fading in */
-    @keyframes fadeIn {
-        from {
-            opacity: 0;
-        }
-        to {
-            opacity: 1;
-        }
+/* Animation for fading in */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
     }
-    
+    to {
+        opacity: 1;
+    }
+}
+
 @media screen and (max-width: 1050px) {
 }
 
@@ -766,17 +799,14 @@ textarea {
         transition: height 0.2s ease-in-out;
     }
 
-
-    .head-outer.pressed a:not(.nav-link-logo):not(.nav-link-sandwich):not(.current){
+    .head-outer.pressed
+        a:not(.nav-link-logo):not(.nav-link-sandwich):not(.current) {
         font-size: 3rem;
     }
 
-
-
     .head-outer.pressed header {
-        grid-template-rows: 10rem 15rem 6rem 6rem 6rem 6rem;
+        grid-template-rows: 10rem 15rem 6rem 6rem 6rem 10rem;
     }
-
 
     /* Apply the fadeIn animation to pressed links */
     .head-outer.pressed a.nav-link-home,
@@ -784,7 +814,7 @@ textarea {
     .head-outer.pressed a.nav-link-about,
     .head-outer.pressed a.nav-link-login {
         display: initial; /* Initially set to display: none */
-        font-size: 3.3rem;
+        font-size: 3rem;
         padding: 0.5rem 0;
         opacity: 0; /* Initially set to opacity: 0 */
         animation-name: fadeIn;
@@ -858,6 +888,19 @@ textarea {
     .img-footer {
         background-size: 275%;
         background-position: 90% top;
+    }
+
+    .language-container {
+        justify-self: end;
+    }
+
+    .pressed .language-container {
+        
+        justify-self: center;
+        align-self: flex-end;
+        margin-right: 0;
+        grid-row: 6;
+        grid-column: 2;
     }
 }
 
@@ -966,7 +1009,8 @@ textarea {
         background-position: 90% top;
     }
 
-    .card-title-email, .card-title-01{
+    .card-title-email,
+    .card-title-01 {
         font-size: 3.8rem;
     }
 }
