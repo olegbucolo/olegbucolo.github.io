@@ -610,6 +610,10 @@ textarea {
     margin: 0 auto;
 }
 
+.address a{
+    color: var(--color-03);
+}
+
 .foot-outer-150 .social {
     width: 100%;
     height: 25%;

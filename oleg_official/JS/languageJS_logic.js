@@ -212,6 +212,7 @@ function changeLanguage(language) {
 
         // HOME ITALIANO EMAIL EL.S
         const home_contact_name_label_01_IT = "Nome Completo";
+        const home_contact_name = "Luigi Rossi";
         const home_email_01_IT = "Soggetto";
         const home_placeholder_email_01_IT = "prova.esempio123@email.com";
         const home_placeholder_email_02_IT =
@@ -485,6 +486,14 @@ function changeLanguage(language) {
                 home_contact_name_label_01_IT;
         }
 
+        // placeholder full name input
+        const target_home_contact_name = document.querySelector("#home_contact_name");
+        if(target_home_contact_name){
+            target_home_contact_name.placeholder = home_contact_name;
+        }
+        
+
+
         // placeholder email
         const target_home_placeholder_email_01_IT = document.querySelector(
             "#home_contact_email"
@@ -531,7 +540,7 @@ function changeLanguage(language) {
         }
 
         // HOME ITALIANO INDIRIZZO
-        const target_home_address_a_01_IT = document.querySelector(".address");
+        const target_home_address_a_01_IT = document.querySelector(".address a");
         target_home_address_a_01_IT.innerHTML = home_address_a_01_IT;
         // location.reload();
     }
