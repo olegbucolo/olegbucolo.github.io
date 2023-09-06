@@ -56,7 +56,11 @@ function changeLanguage(language) {
         // about h1_02
         const about_h1_02_IT = "Chi sono?";
 
+        // home h1_03
         const home_h1_03_IT = "Inviami un'email"; // fatto
+
+        // work h1_03
+        const work_h1_03_IT = "Il nostro lavoro";
 
         // ITALIANO H2 (INTENDESI TESTI PIU' PICCOLI DELL'H1 USATO PRIMA)
 
@@ -264,11 +268,18 @@ function changeLanguage(language) {
             target_work_h1_02_IT.innerHTML = work_h1_02_IT;
         }
 
+       
+
         // home h1_03
         const target_home_h1_03_IT =
             document.querySelector(".card-title-email");
         if (target_home_h1_03_IT) {
             target_home_h1_03_IT.innerHTML = home_h1_03_IT;
+        }
+
+        const target_work_h1_03_IT = document.querySelector(".work_h1_03_IT");
+        if(target_work_h1_03_IT){
+            target_work_h1_03_IT.innerHTML = work_h1_03_IT;
         }
 
         // about h1_01
