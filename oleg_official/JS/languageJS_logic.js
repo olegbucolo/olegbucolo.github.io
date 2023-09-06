@@ -204,7 +204,7 @@ function changeLanguage(language) {
 
         // work p_07
         const work_p_07_IT =
-            "Deliziati con il nostro Template Ristorante - un banchetto visivo progettato per mostrare le tue delizie culinarie, i menu e le opzioni di prenotazione. Lascia un'impressione indimenticabile sui cultori del buon cibo e trasforma i visitatori occasionali in avidi commensali.";
+            "Deliziati con il nostro Template Ristorante - un banchetto visivo progettato per mostrare le tue delizie culinarie, i menu e le opzioni di prenotazione. Lascia un'impressione indimenticabile sui cultori del buon cibo e trasforma i visitatori occasionali in avidi commensali. <span style='font-weight: bold'>Attenzione: </span> la pagina non ha le complete funzionalita' di un sito web completo ma offre un'idea di come sara' il sito una volta finito";
 
         // work p_08
         const work_p_08_IT =

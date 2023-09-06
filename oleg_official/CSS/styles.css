@@ -650,6 +650,7 @@ textarea {
     border-radius: 2.5rem;
     cursor: pointer;
     margin-right: 2.5rem;
+    position: relative;
 }
 
 .language-button {
@@ -660,10 +661,34 @@ textarea {
     border-radius: 2.5rem;
     border: none;
     user-select: none;
+    position: relative;
+}
+
+.language-button:nth-child(1)::before{
+    content: "";
+    position: absolute;
+    background-color: var(--color-03);
+    height: .1rem;
+    
+    top: -1.5rem;
+    left: -1rem;
+    right: -1rem;
 }
 
 .language-container.langs-visible .language-button {
     display: block;
+}
+
+.language-container.langs-visible::before {
+    position: absolute;
+    content: "";
+    background-color: var(--color-04);
+    left: -1rem;
+    right: -1.1rem;
+    height: 16.6rem;
+    border-radius: 2.5rem;
+    z-index: -1;
+
 }
 
 .language-button-it {
